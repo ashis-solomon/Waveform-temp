@@ -1,0 +1,862 @@
+tracks": [
+                {
+                    "pos": 0, 
+                    "artist_name": "Eric Church", 
+                    "track_uri": "spotify:track:5XcMzuskwO305UC7RBm9Zu", 
+                    "artist_uri": "spotify:artist:2IvkS5MXK0vPGnwyJsrEyV", 
+                    "track_name": "Hell On The Heart", 
+                    "album_uri": "spotify:album:0QZc1pzqelwhdKftQQDdUw", 
+                    "duration_ms": 164733, 
+                    "album_name": "Carolina"
+                }, 
+                {
+                    "pos": 1, 
+                    "artist_name": "Eric Church", 
+                    "track_uri": "spotify:track:6HLciiLMPssno4lT4gbObT", 
+                    "artist_uri": "spotify:artist:2IvkS5MXK0vPGnwyJsrEyV", 
+                    "track_name": "Love Your Love the Most", 
+                    "album_uri": "spotify:album:0QZc1pzqelwhdKftQQDdUw", 
+                    "duration_ms": 170386, 
+                    "album_name": "Carolina"
+                }, 
+                {
+                    "pos": 2, 
+                    "artist_name": "Eric Church", 
+                    "track_uri": "spotify:track:2NNTz1El05gMTE1K5L17jw", 
+                    "artist_uri": "spotify:artist:2IvkS5MXK0vPGnwyJsrEyV", 
+                    "track_name": "Carolina", 
+                    "album_uri": "spotify:album:0QZc1pzqelwhdKftQQDdUw", 
+                    "duration_ms": 279080, 
+                    "album_name": "Carolina"
+                }, 
+                {
+                    "pos": 3, 
+                    "artist_name": "Eric Church", 
+                    "track_uri": "spotify:track:2FNYp8WnWlqkI4J0Zgea7a", 
+                    "artist_uri": "spotify:artist:2IvkS5MXK0vPGnwyJsrEyV", 
+                    "track_name": "Guys Like Me", 
+                    "album_uri": "spotify:album:1UiXoLoFB4ODK3YqH97Qrp", 
+                    "duration_ms": 191053, 
+                    "album_name": "Sinners Like Me"
+                }, 
+                {
+                    "pos": 4, 
+                    "artist_name": "Eric Church", 
+                    "track_uri": "spotify:track:1cktZnxiONH0hR6Q3DKy8h", 
+                    "artist_uri": "spotify:artist:2IvkS5MXK0vPGnwyJsrEyV", 
+                    "track_name": "Drink In My Hand", 
+                    "album_uri": "spotify:album:5dtw6CoMhbrSj01YUvdQOF", 
+                    "duration_ms": 191306, 
+                    "album_name": "Chief"
+                }
+            ], 
+            "num_holdouts": 86, 
+            "pid": 1004650, 
+            "num_tracks": 91, 
+            "num_samples": 5
+        }, 
+        {
+            "tracks": [
+                {
+                    "pos": 0, 
+                    "artist_name": "Nirvana", 
+                    "track_uri": "spotify:track:5ghIJDpPoe3CfHMGu71E6T", 
+                    "artist_uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh", 
+                    "track_name": "Smells Like Teen Spirit", 
+                    "album_uri": "spotify:album:2guirTSEqLizK7j9i1MTTZ", 
+                    "duration_ms": 301920, 
+                    "album_name": "Nevermind"
+                }, 
+                {
+                    "pos": 1, 
+                    "artist_name": "Sister Hazel", 
+                    "track_uri": "spotify:track:2skmOCFU64Bg7Ytkgwliwe", 
+                    "artist_uri": "spotify:artist:7m60UAnbgFFNuJbmS6OxTk", 
+                    "track_name": "All For You", 
+                    "album_uri": "spotify:album:2lHGAzINLOdD0505xdjpyZ", 
+                    "duration_ms": 218706, 
+                    "album_name": "...Somewhere More Familiar"
+                }, 
+                {
+                    "pos": 2, 
+                    "artist_name": "The Smashing Pumpkins", 
+                    "track_uri": "spotify:track:3Y8Ff1nH44jFywAtpgmleZ", 
+                    "artist_uri": "spotify:artist:40Yq4vzPs9VNUrIBG5Jr2i", 
+                    "track_name": "1979", 
+                    "album_uri": "spotify:album:4bPT6Q8ppaSNppk1kbEbLl", 
+                    "duration_ms": 266200, 
+                    "album_name": "Mellon Collie and the Infinite Sadness"
+                }, 
+                {
+                    "pos": 3, 
+                    "artist_name": "Primitive Radio Gods", 
+                    "track_uri": "spotify:track:5hcer4MP5GeHqtSjDYx5AC", 
+                    "artist_uri": "spotify:artist:5wTpMQz4RtF6dFX9blvMDc", 
+                    "track_name": "Standing Outside a Broken Phone Booth with Money in My Hand", 
+                    "album_uri": "spotify:album:0MomEpdhFU5YUXQxr47kxe", 
+                    "duration_ms": 336800, 
+                    "album_name": "Rocket"
+                }, 
+                {
+                    "pos": 4, 
+                    "artist_name": "The Offspring", 
+                    "track_uri": "spotify:track:6EsBn1Md8C5YdbCzvwvZq8", 
+                    "artist_uri": "spotify:artist:5LfGQac0EIXyAN8aUwmNAQ", 
+                    "track_name": "Self Esteem", 
+                    "album_uri": "spotify:album:5HDj9yjtyhPduBMVax56pg", 
+                    "duration_ms": 257760, 
+                    "album_name": "Greatest Hits"
+                }
+            ], 
+            "num_holdouts": 64, 
+            "pid": 1004651, 
+            "num_tracks": 69, 
+            "num_samples": 5
+        }, 
+        {
+            "tracks": [
+                {
+                    "pos": 0, 
+                    "artist_name": "Deorro", 
+                    "track_uri": "spotify:track:3MOECVkNshqHYTPt5DZcdN", 
+                    "artist_uri": "spotify:artist:6VD4UEUPvtsemqD3mmTqCR", 
+                    "track_name": "Five More Hours - Deorro x Chris Brown", 
+                    "album_uri": "spotify:album:1J6b7W1nSHH7BObK8zIoEY", 
+                    "duration_ms": 211975, 
+                    "album_name": "Good Evening"
+                }, 
+                {
+                    "pos": 1, 
+                    "artist_name": "Will Sparks", 
+                    "track_uri": "spotify:track:5ak3e3wZBrs04fOuuHq1px", 
+                    "artist_uri": "spotify:artist:1u7OVFmWah4wQhOPIbUb8U", 
+                    "track_name": "Ah Yeah! - Original", 
+                    "album_uri": "spotify:album:0O6VKi6sTFS7xUsG2I85C1", 
+                    "duration_ms": 204375, 
+                    "album_name": "Ah Yeah So What"
+                }, 
+                {
+                    "pos": 2, 
+                    "artist_name": "Stephen Swartz", 
+                    "track_uri": "spotify:track:6lbhkPbkKj6jnPTt1FelVo", 
+                    "artist_uri": "spotify:artist:2RMgYVDRYOGHlqqcushWNU", 
+                    "track_name": "Bullet Train (feat. Joni Fatora)", 
+                    "album_uri": "spotify:album:1Yd1ARdvNdMUo6KnuN6q6w", 
+                    "duration_ms": 245538, 
+                    "album_name": "Bullet Train (feat. Joni Fatora)"
+                }, 
+                {
+                    "pos": 3, 
+                    "artist_name": "Kanye West", 
+                    "track_uri": "spotify:track:1fLdeDTrJWNkwOeFyAVLvF", 
+                    "artist_uri": "spotify:artist:5K4W6rqBFWDnAN6FQUkS6x", 
+                    "track_name": "Good Life", 
+                    "album_uri": "spotify:album:3SZr5Pco2oqKFORCP3WNj9", 
+                    "duration_ms": 207000, 
+                    "album_name": "Graduation"
+                }, 
+                {
+                    "pos": 4, 
+                    "artist_name": "Red Hot Chili Peppers", 
+                    "track_uri": "spotify:track:48UPSzbZjgc449aqz8bxox", 
+                    "artist_uri": "spotify:artist:0L8ExT028jH3ddEcZwqJJ5", 
+                    "track_name": "Californication", 
+                    "album_uri": "spotify:album:2Y9IRtehByVkegoD7TcLfi", 
+                    "duration_ms": 329733, 
+                    "album_name": "Californication"
+                }
+            ], 
+            "num_holdouts": 43, 
+            "pid": 1004659, 
+            "num_tracks": 48, 
+            "num_samples": 5
+        }, 
+        {
+            "tracks": [
+                {
+                    "pos": 0, 
+                    "artist_name": "Fiona Apple", 
+                    "track_uri": "spotify:track:6wntNrWu9bXBNPmujdwqhL", 
+                    "artist_uri": "spotify:artist:3g2kUQ6tHLLbmkV7T4GPtL", 
+                    "track_name": "Across the Universe", 
+                    "album_uri": "spotify:album:6zHpl6EFvM9Z7I9JGETeUz", 
+                    "duration_ms": 307333, 
+                    "album_name": "Pleasantville -Music From The Motion Picture"
+                }, 
+                {
+                    "pos": 1, 
+                    "artist_name": "Dido", 
+                    "track_uri": "spotify:track:3yUcJwYu7fXAfqMj9krY6l", 
+                    "artist_uri": "spotify:artist:2mpeljBig2IXLXRAFO9AAs", 
+                    "track_name": "Thank You", 
+                    "album_uri": "spotify:album:7ydMeYrv8bFFRkkHepoJM4", 
+                    "duration_ms": 218360, 
+                    "album_name": "No Angel"
+                }, 
+                {
+                    "pos": 2, 
+                    "artist_name": "Dido", 
+                    "track_uri": "spotify:track:6si71supnBUhddjR2FJc2L", 
+                    "artist_uri": "spotify:artist:2mpeljBig2IXLXRAFO9AAs", 
+                    "track_name": "White Flag", 
+                    "album_uri": "spotify:album:7HlZFlk0jJq3Bb03AOyMTE", 
+                    "duration_ms": 240040, 
+                    "album_name": "Life For Rent"
+                }, 
+                {
+                    "pos": 3, 
+                    "artist_name": "The Doobie Brothers", 
+                    "track_uri": "spotify:track:4p8QcNkaq2FQj8uGJ7HEDK", 
+                    "artist_uri": "spotify:artist:39T6qqI0jDtSWWioX8eGJz", 
+                    "track_name": "Black Water", 
+                    "album_uri": "spotify:album:6Jnw1MZ5lrICgurtzc3WqB", 
+                    "duration_ms": 255266, 
+                    "album_name": "What Were Once Vices Are Now Habits"
+                }, 
+                {
+                    "pos": 4, 
+                    "artist_name": "Imogen Heap", 
+                    "track_uri": "spotify:track:1ZxbtHcxGJem3r6Rajk4Xb", 
+                    "artist_uri": "spotify:artist:6Xb4ezwoAQC4516kI89nWz", 
+                    "track_name": "Aha!", 
+                    "album_uri": "spotify:album:1H8velOQ9zUFqpuQPd2bkO", 
+                    "duration_ms": 147333, 
+                    "album_name": "Ellipse"
+                }
+            ], 
+            "num_holdouts": 89, 
+            "pid": 1004661, 
+            "num_tracks": 94, 
+            "num_samples": 5
+        }, 
+        {
+            "tracks": [
+                {
+                    "pos": 0, 
+                    "artist_name": "Wes Walker", 
+                    "track_uri": "spotify:track:6qMXubogFdMrvVMJwqATzd", 
+                    "artist_uri": "spotify:artist:0HjYETXAvcL6mzaKjAmH2K", 
+                    "track_name": "Jordan Belfort", 
+                    "album_uri": "spotify:album:4G2vHAnHSkuzj1VVBJrRbF", 
+                    "duration_ms": 207911, 
+                    "album_name": "Jordan Belfort"
+                }, 
+                {
+                    "pos": 1, 
+                    "artist_name": "G-Eazy", 
+                    "track_uri": "spotify:track:40YcuQysJ0KlGQTeGUosTC", 
+                    "artist_uri": "spotify:artist:02kJSzxNuaWGqwubyUba0Z", 
+                    "track_name": "Me, Myself & I", 
+                    "album_uri": "spotify:album:09Q3WwGYsQe5ognkvVkmCu", 
+                    "duration_ms": 251466, 
+                    "album_name": "When It's Dark Out"
+                }, 
+                {
+                    "pos": 2, 
+                    "artist_name": "G-Eazy", 
+                    "track_uri": "spotify:track:422lAAWQO9TqL1LxIPdhOn", 
+                    "artist_uri": "spotify:artist:02kJSzxNuaWGqwubyUba0Z", 
+                    "track_name": "Random", 
+                    "album_uri": "spotify:album:09Q3WwGYsQe5ognkvVkmCu", 
+                    "duration_ms": 180333, 
+                    "album_name": "When It's Dark Out"
+                }, 
+                {
+                    "pos": 3, 
+                    "artist_name": "Mac Miller", 
+                    "track_uri": "spotify:track:0titWWT0Wj2raZOwtlE8ZI", 
+                    "artist_uri": "spotify:artist:4LLpKhyESsyAXpc4laK94U", 
+                    "track_name": "100 Grandkids - Short Radio Edit", 
+                    "album_uri": "spotify:album:1WGXHGjQ18l1t8svqjddfu", 
+                    "duration_ms": 238206, 
+                    "album_name": "100 Grandkids"
+                }, 
+                {
+                    "pos": 4, 
+                    "artist_name": "Mac Miller", 
+                    "track_uri": "spotify:track:6ulzLZnp6Y2TVLh1inckeJ", 
+                    "artist_uri": "spotify:artist:4LLpKhyESsyAXpc4laK94U", 
+                    "track_name": "Brand Name", 
+                    "album_uri": "spotify:album:2Tyx5dLhHYkx6zeAdVaTzN", 
+                    "duration_ms": 302133, 
+                    "album_name": "GO:OD AM"
+                }
+            ], 
+            "num_holdouts": 41, 
+            "pid": 1004668, 
+            "num_tracks": 46, 
+            "num_samples": 5
+        }, 
+        {
+            "tracks": [
+                {
+                    "pos": 0, 
+                    "artist_name": "The Weeknd", 
+                    "track_uri": "spotify:track:1VoJttdilLYpbpYN142Zek", 
+                    "artist_uri": "spotify:artist:1Xyo4u8uXC1ZmMpatF05PJ", 
+                    "track_name": "Real Life", 
+                    "album_uri": "spotify:album:28ZKQMoNBB0etKXZ97G2SN", 
+                    "duration_ms": 223373, 
+                    "album_name": "Beauty Behind The Madness"
+                }, 
+                {
+                    "pos": 1, 
+                    "artist_name": "Ariana Grande", 
+                    "track_uri": "spotify:track:4r4V1wYecTxSAAXV11cFPD", 
+                    "artist_uri": "spotify:artist:66CXWjxzNUsdJxJ2JdwvnR", 
+                    "track_name": "Focus", 
+                    "album_uri": "spotify:album:1TVt7uWfV3vLiU8bEmBEWL", 
+                    "duration_ms": 211360, 
+                    "album_name": "Dangerous Woman"
+                }, 
+                {
+                    "pos": 2, 
+                    "artist_name": "Justin Bieber", 
+                    "track_uri": "spotify:track:747eWJy8c3u09N30NSqSTp", 
+                    "artist_uri": "spotify:artist:1uNFoZAHBGtllmzznpCI3s", 
+                    "track_name": "I'll Show You", 
+                    "album_uri": "spotify:album:7fZH0aUAjY3ay25obOUf2a", 
+                    "duration_ms": 199946, 
+                    "album_name": "Purpose"
+                }, 
+                {
+                    "pos": 3, 
+                    "artist_name": "Ellie Goulding", 
+                    "track_uri": "spotify:track:5a7NdkF09AfD0H607eiOkX", 
+                    "artist_uri": "spotify:artist:0X2BH1fck6amBIoJhDVmmJ", 
+                    "track_name": "On My Mind", 
+                    "album_uri": "spotify:album:20Ol6zZ0nLlc5EGTH1zA0j", 
+                    "duration_ms": 213445, 
+                    "album_name": "Delirium"
+                }, 
+                {
+                    "pos": 4, 
+                    "artist_name": "J Balvin", 
+                    "track_uri": "spotify:track:5N8nNuTmIzkZOfcxXlygUw", 
+                    "artist_uri": "spotify:artist:1vyhD5VmyZ7KMfW5gqLgo5", 
+                    "track_name": "Ginza", 
+                    "album_uri": "spotify:album:2LYwooMTH1iJeBvWyXXWUf", 
+                    "duration_ms": 171093, 
+                    "album_name": "Energ\u00eda"
+                }
+            ], 
+            "num_holdouts": 51, 
+            "pid": 1004669, 
+            "num_tracks": 56, 
+            "num_samples": 5
+        }, 
+        {
+            "tracks": [
+                {
+                    "pos": 0, 
+                    "artist_name": "The Frank & Todd Show", 
+                    "track_uri": "spotify:track:7g5WuWnwVThfrHC4Y49xdi", 
+                    "artist_uri": "spotify:artist:7C5kb51ZDvGVr3yJvVTTTy", 
+                    "track_name": "Holiday Road", 
+                    "album_uri": "spotify:album:7FU7umvgYL7ozlZR8nLidy", 
+                    "duration_ms": 155173, 
+                    "album_name": "...Take It Twice"
+                }, 
+                {
+                    "pos": 1, 
+                    "artist_name": "Dion", 
+                    "track_uri": "spotify:track:3ApktgPHkNDBWaZCWvOKjK", 
+                    "artist_uri": "spotify:artist:15FyiY3ChN0QRspHIQYq0W", 
+                    "track_name": "Lovers Who Wander", 
+                    "album_uri": "spotify:album:6S5Oifu7WECuUT6mixG6ku", 
+                    "duration_ms": 151466, 
+                    "album_name": "Lovers Who Wander"
+                }, 
+                {
+                    "pos": 2, 
+                    "artist_name": "Dion", 
+                    "track_uri": "spotify:track:5UvR3VWxfVVKMgGrD3XZVj", 
+                    "artist_uri": "spotify:artist:15FyiY3ChN0QRspHIQYq0W", 
+                    "track_name": "Dream Lover", 
+                    "album_uri": "spotify:album:20vUqyMzF8fgQhkdLdtzi7", 
+                    "duration_ms": 138666, 
+                    "album_name": "Runaround Sue"
+                }, 
+                {
+                    "pos": 3, 
+                    "artist_name": "Dion", 
+                    "track_uri": "spotify:track:1UwriLz98ILbRhrtohTca1", 
+                    "artist_uri": "spotify:artist:15FyiY3ChN0QRspHIQYq0W", 
+                    "track_name": "The Wanderer", 
+                    "album_uri": "spotify:album:56sNE1JDGLJLDRK5F83Q0N", 
+                    "duration_ms": 167160, 
+                    "album_name": "The Best Of Dion"
+                }, 
+                {
+                    "pos": 4, 
+                    "artist_name": "The Archies", 
+                    "track_uri": "spotify:track:6L7CjMm9gJNn8Ze62bRk3g", 
+                    "artist_uri": "spotify:artist:33QmoCkSqADuQEtMCysYLh", 
+                    "track_name": "Sugar Sugar", 
+                    "album_uri": "spotify:album:1OwOwwgDrVsbM1IbcFjDvG", 
+                    "duration_ms": 167276, 
+                    "album_name": "Absolutely the Best of the Archies"
+                }
+            ], 
+            "num_holdouts": 91, 
+            "pid": 1004670, 
+            "num_tracks": 96, 
+            "num_samples": 5
+        }, 
+        {
+            "tracks": [
+                {
+                    "pos": 0, 
+                    "artist_name": "David Guetta", 
+                    "track_uri": "spotify:track:5VAKwJzAJgpysx7FL9W6MJ", 
+                    "artist_uri": "spotify:artist:1Cs0zKBU1kc0i8ypK3B9ai", 
+                    "track_name": "Without You (feat. Usher) - feat. Usher", 
+                    "album_uri": "spotify:album:1fAn5gw4Q5HN8Wpx2neYd2", 
+                    "duration_ms": 208133, 
+                    "album_name": "Nothing But the Beat Ultimate"
+                }, 
+                {
+                    "pos": 1, 
+                    "artist_name": "David Guetta", 
+                    "track_uri": "spotify:track:7yO48FWUkqsrdxrwkGcnwl", 
+                    "artist_uri": "spotify:artist:1Cs0zKBU1kc0i8ypK3B9ai", 
+                    "track_name": "Where Them Girls At (feat. Nicki Minaj & Flo Rida) - feat. Nicki Minaj & Flo Rida", 
+                    "album_uri": "spotify:album:1fAn5gw4Q5HN8Wpx2neYd2", 
+                    "duration_ms": 194840, 
+                    "album_name": "Nothing But the Beat Ultimate"
+                }, 
+                {
+                    "pos": 2, 
+                    "artist_name": "David Guetta", 
+                    "track_uri": "spotify:track:3QVHmaZ3pMlOwhK6NZ7Kyd", 
+                    "artist_uri": "spotify:artist:1Cs0zKBU1kc0i8ypK3B9ai", 
+                    "track_name": "Repeat (feat. Jessie J) - feat. Jessie J", 
+                    "album_uri": "spotify:album:5aprcHwM1KJhaY9Kbxkfkn", 
+                    "duration_ms": 206276, 
+                    "album_name": "Nothing But the Beat 2.0"
+                }, 
+                {
+                    "pos": 3, 
+                    "artist_name": "David Guetta", 
+                    "track_uri": "spotify:track:0SHpSgHEnE4yrQvZsgdfWq", 
+                    "artist_uri": "spotify:artist:1Cs0zKBU1kc0i8ypK3B9ai", 
+                    "track_name": "What the F***", 
+                    "album_uri": "spotify:album:5aprcHwM1KJhaY9Kbxkfkn", 
+                    "duration_ms": 247500, 
+                    "album_name": "Nothing But the Beat 2.0"
+                }, 
+                {
+                    "pos": 4, 
+                    "artist_name": "David Guetta", 
+                    "track_uri": "spotify:track:2QD4C6RRHgRNRAyrfnoeAo", 
+                    "artist_uri": "spotify:artist:1Cs0zKBU1kc0i8ypK3B9ai", 
+                    "track_name": "Play Hard (feat. Ne-Yo & Akon) - feat. Ne-Yo & Akon", 
+                    "album_uri": "spotify:album:5aprcHwM1KJhaY9Kbxkfkn", 
+                    "duration_ms": 201000, 
+                    "album_name": "Nothing But the Beat 2.0"
+                }
+            ], 
+            "num_holdouts": 36, 
+            "pid": 1004677, 
+            "num_tracks": 41, 
+            "num_samples": 5
+        }, 
+        {
+            "tracks": [
+                {
+                    "pos": 0, 
+                    "artist_name": "Carnage", 
+                    "track_uri": "spotify:track:5MGeW5mHnqeJiM0NPBbkEZ", 
+                    "artist_uri": "spotify:artist:7CCjtD0hCK005Bvg2WG1a7", 
+                    "track_name": "I Like Tuh", 
+                    "album_uri": "spotify:album:6AFct76pAIPVHMuOHA80YE", 
+                    "duration_ms": 189000, 
+                    "album_name": "Papi Gordo"
+                }, 
+                {
+                    "pos": 1, 
+                    "artist_name": "J. Cole", 
+                    "track_uri": "spotify:track:62vpWI1CHwFy7tMIcSStl8", 
+                    "artist_uri": "spotify:artist:6l3HvQ5sa6mXTsMTB19rO5", 
+                    "track_name": "No Role Modelz", 
+                    "album_uri": "spotify:album:7viNUmZZ8ztn2UB4XB3jIL", 
+                    "duration_ms": 292986, 
+                    "album_name": "2014 Forest Hills Drive"
+                }, 
+                {
+                    "pos": 2, 
+                    "artist_name": "Fetty Wap", 
+                    "track_uri": "spotify:track:5NQbUaeTEOGdD6hHcre0dZ", 
+                    "artist_uri": "spotify:artist:6PXS4YHDkKvl1wkIl4V8DL", 
+                    "track_name": "679 (feat. Remy Boyz)", 
+                    "album_uri": "spotify:album:0TyDTzG2zt2tg0wONT9wSU", 
+                    "duration_ms": 196693, 
+                    "album_name": "679 (feat. Remy Boyz)"
+                }, 
+                {
+                    "pos": 3, 
+                    "artist_name": "Fetty Wap", 
+                    "track_uri": "spotify:track:3ESSGgWzRf1xvP7G5hHMhB", 
+                    "artist_uri": "spotify:artist:6PXS4YHDkKvl1wkIl4V8DL", 
+                    "track_name": "Again", 
+                    "album_uri": "spotify:album:2gKQvajkEEaDtkqJ8FJ4uw", 
+                    "duration_ms": 312240, 
+                    "album_name": "Fetty Wap"
+                }, 
+                {
+                    "pos": 4, 
+                    "artist_name": "Drake", 
+                    "track_uri": "spotify:track:2FBUoWkIuQXwayw2RNo5l6", 
+                    "artist_uri": "spotify:artist:3TVXtAsR1Inumwj472S9r4", 
+                    "track_name": "Hotline Bling", 
+                    "album_uri": "spotify:album:3hARKC8cinq3mZLLAEaBh9", 
+                    "duration_ms": 267066, 
+                    "album_name": "Views"
+                }
+            ], 
+            "num_holdouts": 85, 
+            "pid": 1004679, 
+            "num_tracks": 90, 
+            "num_samples": 5
+        }, 
+        {
+            "tracks": [
+                {
+                    "pos": 0, 
+                    "artist_name": "Ready For The World", 
+                    "track_uri": "spotify:track:5PM96PMKMfD1lLX2lryUsG", 
+                    "artist_uri": "spotify:artist:6h29EZDlc2NTvmCUe4yoXV", 
+                    "track_name": "Oh Sheila", 
+                    "album_uri": "spotify:album:7J4vN1d089or6LJDdIQxdg", 
+                    "duration_ms": 240093, 
+                    "album_name": "Ready For The World"
+                }, 
+                {
+                    "pos": 1, 
+                    "artist_name": "Johnny Kemp", 
+                    "track_uri": "spotify:track:1OK4hVcucqYKMU9Ipb3dtx", 
+                    "artist_uri": "spotify:artist:2u8hDu5KBMpvneOV8Th3LE", 
+                    "track_name": "Just Got Paid", 
+                    "album_uri": "spotify:album:4OhFkx7dTPfj0BXerfldyk", 
+                    "duration_ms": 212466, 
+                    "album_name": "Radio Hits Of the '80s"
+                }, 
+                {
+                    "pos": 2, 
+                    "artist_name": "Tony! Toni! Ton\u00e9!", 
+                    "track_uri": "spotify:track:4cRR2gUTOerkUOW5iZpm91", 
+                    "artist_uri": "spotify:artist:7vWlb4pM85jCHvV771qZZW", 
+                    "track_name": "Feels Good", 
+                    "album_uri": "spotify:album:5yORmYtkTZdFgo6ppcsFZT", 
+                    "duration_ms": 298373, 
+                    "album_name": "The Revival"
+                }, 
+                {
+                    "pos": 3, 
+                    "artist_name": "Donell Jones", 
+                    "track_uri": "spotify:track:5PMKzsUsTpZZGsCcJBuhP2", 
+                    "artist_uri": "spotify:artist:5KNqYrivNgVCHBssEUSu5B", 
+                    "track_name": "U Know What's Up", 
+                    "album_uri": "spotify:album:01riz9JMpPdL99fYhoZaph", 
+                    "duration_ms": 243733, 
+                    "album_name": "Where I Wanna Be"
+                }, 
+                {
+                    "pos": 4, 
+                    "artist_name": "Johnny Gill", 
+                    "track_uri": "spotify:track:40xz60ciGIpsRtDqRfPKBE", 
+                    "artist_uri": "spotify:artist:7oHzn7edwmrYClrPRINkbn", 
+                    "track_name": "Rub You The Right Way", 
+                    "album_uri": "spotify:album:3VNcHyjMgpq2UQN5LTs4qC", 
+                    "duration_ms": 332306, 
+                    "album_name": "Johnny Gill"
+                }
+            ], 
+            "num_holdouts": 86, 
+            "pid": 1004681, 
+            "num_tracks": 91, 
+            "num_samples": 5
+        }, 
+        {
+            "tracks": [
+                {
+                    "pos": 0, 
+                    "artist_name": "Bryson Tiller", 
+                    "track_uri": "spotify:track:3pXF1nA74528Edde4of9CC", 
+                    "artist_uri": "spotify:artist:2EMAnMvWE2eb56ToJVfCWs", 
+                    "track_name": "Don't", 
+                    "album_uri": "spotify:album:6eZdwrhB97A3EYx9QppGfl", 
+                    "duration_ms": 198293, 
+                    "album_name": "T R A P S O U L"
+                }, 
+                {
+                    "pos": 1, 
+                    "artist_name": "Bryson Tiller", 
+                    "track_uri": "spotify:track:16bHRxM89ue0TiCKARYbRp", 
+                    "artist_uri": "spotify:artist:2EMAnMvWE2eb56ToJVfCWs", 
+                    "track_name": "Sorry Not Sorry", 
+                    "album_uri": "spotify:album:6eZdwrhB97A3EYx9QppGfl", 
+                    "duration_ms": 200760, 
+                    "album_name": "T R A P S O U L"
+                }, 
+                {
+                    "pos": 2, 
+                    "artist_name": "Bryson Tiller", 
+                    "track_uri": "spotify:track:5QDGKcQLqOJvoiu8eScEaM", 
+                    "artist_uri": "spotify:artist:2EMAnMvWE2eb56ToJVfCWs", 
+                    "track_name": "Let Em' Know", 
+                    "album_uri": "spotify:album:6eZdwrhB97A3EYx9QppGfl", 
+                    "duration_ms": 261880, 
+                    "album_name": "T R A P S O U L"
+                }, 
+                {
+                    "pos": 3, 
+                    "artist_name": "Bryson Tiller", 
+                    "track_uri": "spotify:track:5RqsqQU0erB0OgLbwem6pU", 
+                    "artist_uri": "spotify:artist:2EMAnMvWE2eb56ToJVfCWs", 
+                    "track_name": "Rambo", 
+                    "album_uri": "spotify:album:6eZdwrhB97A3EYx9QppGfl", 
+                    "duration_ms": 223480, 
+                    "album_name": "T R A P S O U L"
+                }, 
+                {
+                    "pos": 4, 
+                    "artist_name": "Bryson Tiller", 
+                    "track_uri": "spotify:track:43PuMrRfbyyuz4QpZ3oAwN", 
+                    "artist_uri": "spotify:artist:2EMAnMvWE2eb56ToJVfCWs", 
+                    "track_name": "Exchange", 
+                    "album_uri": "spotify:album:6eZdwrhB97A3EYx9QppGfl", 
+                    "duration_ms": 194613, 
+                    "album_name": "T R A P S O U L"
+                }
+            ], 
+            "num_holdouts": 67, 
+            "pid": 1004684, 
+            "num_tracks": 72, 
+            "num_samples": 5
+        }, 
+        {
+            "tracks": [
+                {
+                    "pos": 0, 
+                    "artist_name": "The 1975", 
+                    "track_uri": "spotify:track:73jVPicY2G9YHmzgjk69ae", 
+                    "artist_uri": "spotify:artist:3mIj9lX2MWuHmhNCA7LSCW", 
+                    "track_name": "Robbers", 
+                    "album_uri": "spotify:album:6Z1zv6Hw9bdvSoxI5uYk2h", 
+                    "duration_ms": 254509, 
+                    "album_name": "The 1975"
+                }, 
+                {
+                    "pos": 1, 
+                    "artist_name": "The 1975", 
+                    "track_uri": "spotify:track:4aL0a88FhLISWmvanzprnA", 
+                    "artist_uri": "spotify:artist:3mIj9lX2MWuHmhNCA7LSCW", 
+                    "track_name": "The City", 
+                    "album_uri": "spotify:album:6Z1zv6Hw9bdvSoxI5uYk2h", 
+                    "duration_ms": 206882, 
+                    "album_name": "The 1975"
+                }, 
+                {
+                    "pos": 2, 
+                    "artist_name": "The Black Keys", 
+                    "track_uri": "spotify:track:0zo4T5c5VV42554ySEc5J6", 
+                    "artist_uri": "spotify:artist:7mnBLXK823vNxN3UWB7Gfz", 
+                    "track_name": "Gotta Get Away", 
+                    "album_uri": "spotify:album:6TvxpBzf9c8H1fsrAaQ8t3", 
+                    "duration_ms": 180173, 
+                    "album_name": "Turn Blue"
+                }, 
+                {
+                    "pos": 3, 
+                    "artist_name": "AWOLNATION", 
+                    "track_uri": "spotify:track:2LrHhwwnwGyLskxx222ase", 
+                    "artist_uri": "spotify:artist:4njdEjTnLfcGImKZu1iSrz", 
+                    "track_name": "Not Your Fault", 
+                    "album_uri": "spotify:album:54cqYZuTcNQTSUrQ7FoTq6", 
+                    "duration_ms": 242470, 
+                    "album_name": "Megalithic Symphony"
+                }, 
+                {
+                    "pos": 4, 
+                    "artist_name": "Kings of Leon", 
+                    "track_uri": "spotify:track:33DxzZNm85rorgfnilllJg", 
+                    "artist_uri": "spotify:artist:2qk9voo8llSGYcZ6xrBzKx", 
+                    "track_name": "Radioactive", 
+                    "album_uri": "spotify:album:3GQy3QdRfl7RZUix1rhLtB", 
+                    "duration_ms": 206186, 
+                    "album_name": "Come Around Sundown"
+                }
+            ], 
+            "num_holdouts": 37, 
+            "pid": 1004686, 
+            "num_tracks": 42, 
+            "num_samples": 5
+        }, 
+        {
+            "tracks": [
+                {
+                    "pos": 0, 
+                    "artist_name": "SAINt JHN", 
+                    "track_uri": "spotify:track:4XcgXoa8qLuT7qVjMEbU0G", 
+                    "artist_uri": "spotify:artist:0H39MdGGX6dbnnQPt6NQkZ", 
+                    "track_name": "Roses", 
+                    "album_uri": "spotify:album:4KrBJkytkFf1IB5ZFY6Adn", 
+                    "duration_ms": 173610, 
+                    "album_name": "Roses"
+                }, 
+                {
+                    "pos": 1, 
+                    "artist_name": "Noah Carter", 
+                    "track_uri": "spotify:track:03lq55g82Acj75uyIuFgAC", 
+                    "artist_uri": "spotify:artist:2dfY7zXIP61MKHtD175hFp", 
+                    "track_name": "Do You", 
+                    "album_uri": "spotify:album:3PyWIbc6qXOUrNH9Ivbhpf", 
+                    "duration_ms": 229166, 
+                    "album_name": "Do You"
+                }, 
+                {
+                    "pos": 2, 
+                    "artist_name": "Cashmere Cat", 
+                    "track_uri": "spotify:track:4Q5yMlwAfAoitqg4r9oZHN", 
+                    "artist_uri": "spotify:artist:2LZDXcxJWgsJfKXZv9a5eG", 
+                    "track_name": "Quit (feat. Ariana Grande)", 
+                    "album_uri": "spotify:album:0JjoGwsBjce2mgHRliH0VN", 
+                    "duration_ms": 258188, 
+                    "album_name": "9"
+                }, 
+                {
+                    "pos": 3, 
+                    "artist_name": "Rascal Flatts", 
+                    "track_uri": "spotify:track:7jkWXm5j2er2KfsCRPwWfy", 
+                    "artist_uri": "spotify:artist:0a1gHP0HAqALbEyxaD5Ngn", 
+                    "track_name": "Easy", 
+                    "album_uri": "spotify:album:7vb2No5vWyz3UhcMA9UdjG", 
+                    "duration_ms": 218480, 
+                    "album_name": "Nothing Like This"
+                }, 
+                {
+                    "pos": 4, 
+                    "artist_name": "The Chainsmokers", 
+                    "track_uri": "spotify:track:6V9kwssTrwkKT72imgowj9", 
+                    "artist_uri": "spotify:artist:69GGBxA162lTqCwzJG5jLp", 
+                    "track_name": "My Type", 
+                    "album_uri": "spotify:album:4JPguzRps3kuWDD5GS6oXr", 
+                    "duration_ms": 217413, 
+                    "album_name": "Memories...Do Not Open"
+                }
+            ], 
+            "num_holdouts": 79, 
+            "pid": 1004690, 
+            "num_tracks": 84, 
+            "num_samples": 5
+        }, 
+        {
+            "tracks": [
+                {
+                    "pos": 0, 
+                    "artist_name": "Dierks Bentley", 
+                    "track_uri": "spotify:track:1soxUgYIZb1qx1c7o1Lc7z", 
+                    "artist_uri": "spotify:artist:7x8nK0m0cP2ksQf0mjWdPS", 
+                    "track_name": "Drunk On A Plane", 
+                    "album_uri": "spotify:album:5FoxaIGIRuXsbhZhwdfknU", 
+                    "duration_ms": 254466, 
+                    "album_name": "RISER"
+                }, 
+                {
+                    "pos": 1, 
+                    "artist_name": "Luke Bryan", 
+                    "track_uri": "spotify:track:03fT3OHB9KyMtGMt2zwqCT", 
+                    "artist_uri": "spotify:artist:0BvkDsjIUla7X0k6CSWh1I", 
+                    "track_name": "Play It Again", 
+                    "album_uri": "spotify:album:5M8gr5RV2eR6UkztC69ogB", 
+                    "duration_ms": 226866, 
+                    "album_name": "Crash My Party"
+                }, 
+                {
+                    "pos": 2, 
+                    "artist_name": "Thomas Rhett", 
+                    "track_uri": "spotify:track:5kNe7PE09d6Kvw5pAsx23n", 
+                    "artist_uri": "spotify:artist:6x2LnllRG5uGarZMsD4iO8", 
+                    "track_name": "Die A Happy Man", 
+                    "album_uri": "spotify:album:4ykbJPI8MPscFzROE8dqLy", 
+                    "duration_ms": 227426, 
+                    "album_name": "Tangled Up"
+                }, 
+                {
+                    "pos": 3, 
+                    "artist_name": "Thomas Rhett", 
+                    "track_uri": "spotify:track:4O1CExxinEpKZi3861NlTK", 
+                    "artist_uri": "spotify:artist:6x2LnllRG5uGarZMsD4iO8", 
+                    "track_name": "Get Me Some Of That", 
+                    "album_uri": "spotify:album:2ZHYOFW5giX6a4n5eqTnUB", 
+                    "duration_ms": 187400, 
+                    "album_name": "It Goes Like This"
+                }, 
+                {
+                    "pos": 4, 
+                    "artist_name": "Zac Brown Band", 
+                    "track_uri": "spotify:track:4dGJf1SER1T6ooX46vwzRB", 
+                    "artist_uri": "spotify:artist:6yJCxee7QumYr820xdIsjo", 
+                    "track_name": "Chicken Fried", 
+                    "album_uri": "spotify:album:0Im5nUhAuNDSYVjfPh7RyS", 
+                    "duration_ms": 238146, 
+                    "album_name": "The Foundation"
+                }
+            ], 
+            "num_holdouts": 65, 
+            "pid": 1004694, 
+            "num_tracks": 70, 
+            "num_samples": 5
+        }, 
+        {
+            "tracks": [
+                {
+                    "pos": 0, 
+                    "artist_name": "Bon Jovi", 
+                    "track_uri": "spotify:track:3KYiA4vq6RPO1dE2XROXd8", 
+                    "artist_uri": "spotify:artist:58lV9VcRSjABbAbfWS6skp", 
+                    "track_name": "You Give Love A Bad Name", 
+                    "album_uri": "spotify:album:5uU2uM1RGHfzlA12opjqol", 
+                    "duration_ms": 222706, 
+                    "album_name": "Slippery When Wet"
+                }, 
+                {
+                    "pos": 1, 
+                    "artist_name": "Smash Mouth", 
+                    "track_uri": "spotify:track:4lAYMPLPFOovwTCmtTt9b5", 
+                    "artist_uri": "spotify:artist:2iEvnFsWxR0Syqu2JNopAd", 
+                    "track_name": "I'm A Believer", 
+                    "album_uri": "spotify:album:54E5K2EKljAOlJosBJsuUH", 
+                    "duration_ms": 185306, 
+                    "album_name": "Smash Mouth"
+                }, 
+                {
+                    "pos": 2, 
+                    "artist_name": "The Temptations", 
+                    "track_uri": "spotify:track:6RrXd9Hph4hYR4bf3dbM6H", 
+                    "artist_uri": "spotify:artist:3RwQ26hR2tJtA8F9p2n7jG", 
+                    "track_name": "My Girl", 
+                    "album_uri": "spotify:album:5H2rffw6MNKGWVKBNWNA4S", 
+                    "duration_ms": 165000, 
+                    "album_name": "The Temptations Sing Smokey"
+                }, 
+                {
+                    "pos": 3, 
+                    "artist_name": "Fleetwood Mac", 
+                    "track_uri": "spotify:track:5ihS6UUlyQAfmp48eSkxuQ", 
+                    "artist_uri": "spotify:artist:08GQAI4eElDnROBrJRGE0X", 
+                    "track_name": "Landslide", 
+                    "album_uri": "spotify:album:5VIQ3VaAoRKOEpJ0fewdvo", 
+                    "duration_ms": 199493, 
+                    "album_name": "Fleetwood Mac"
+                }, 
+                {
+                    "pos": 4, 
+                    "artist_name": "Ace of Base", 
+                    "track_uri": "spotify:track:0hrBpAOgrt8RXigk83LLNE", 
+                    "artist_uri": "spotify:artist:5ksRONqssB7BR161NTtJAm", 
+                    "track_name": "The Sign", 
+                    "album_uri": "spotify:album:5UwIyIyFzkM7wKeGtRJPgB", 
+                    "duration_ms": 191240, 
+                    "album_

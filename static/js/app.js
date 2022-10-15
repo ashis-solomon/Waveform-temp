@@ -161,6 +161,7 @@ function keyfunc(e) {
     e.preventDefault();
     if(inputTrack.value != ''){
         enable_searchItem(inputTrack.value)
+        //suggestions1 = search_display
         let resolved_id = resolve_searchID(inputTrack.value)
         localStorage.setItem('trackDisplayName',search_display[resolved_id])
         localStorage.setItem('trackID',search_trackIDs[resolved_id])

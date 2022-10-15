@@ -8,6 +8,12 @@ let webLink;
 
 // if user press any key and release
 inputBox.onkeyup = (e)=>{
+    console.log(e.target.value)
+
+    console.log('yoyoyoyo')
+    enable_searchItem(e.target.value)
+    console.log(search_display)
+    suggestionsAuto = search_display;
     let userData = e.target.value; //user enetered data
     let emptyArray = [];
     if(userData){

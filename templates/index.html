@@ -15,24 +15,7 @@
             <h1>Spotify Autocomplete</h1>
         </header>
 
-        <div>
-            <form action="/audio" method="POST">
-            <input name="inputTrack" id="inputTrack" autoComplete="off" list="suggestions" placeholder="Enter Track Name" size="50"/> 
-            <datalist id="suggestions">
-                <option></option>
-                <option></option>
-                <option></option>
-                <option></option>
-                <option></option>
-                <option></option>
-            </datalist>
-            <br><br><br>
-            <input type="hidden" name="hoo" value="" id="hoo" />
-            <input class="btn" type="submit" value="Submit">
-            </form>
-        </div>
-
-        <br><br><br>
+       
         <!-- ------------------------------------------------------------------------------------------------ -->
 
         <div class="wrapper">
@@ -45,6 +28,27 @@
             <div class="icon"><i class="fas fa-search"></i></div>
           </div>
         </div>
+
+        <!-- ------------------------------------------------------------------------------------------------ -->
+
+        <div>
+          <form action="/audio" method="POST">
+          <input name="inputTrack" id="inputTrack" autoComplete="off" list="suggestions" placeholder="Enter Track Name" size="50"/> 
+          <datalist id="suggestions">
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+          </datalist>
+          <br><br><br>
+          <input type="hidden" name="hoo" value="" id="hoo" />
+          <input class="btn" type="submit" value="Submit">
+          </form>
+      </div>
+
+      <br><br><br>
 
         <!-- ------------------------------------------------------------------------------------------------ -->
         <section id="new_release">

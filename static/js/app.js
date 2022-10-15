@@ -1,7 +1,7 @@
 const REDIRECT_URI = 'https://github.com/ashis-solomon';
 const TOKEN_URL = 'https://accounts.spotify.com/api/token';
 const SEARCH_URL = 'https://api.spotify.com/v1/search'
-const RELEASE_URL = '	https://api.spotify.com/v1/browse/new-releases'
+const RELEASE_URL = 'https://api.spotify.com/v1/browse/new-releases'
 
 const CLIENT_ID = '65ff8b0793fb4cb5aee5e265bd0e7ae9';
 const CLIENT_SECRET = '5d8fa454c17b43d8ae8db3b6842a6b17';
@@ -26,6 +26,7 @@ let search_trackPopularity = [];
 let search_trackUrl = [];
 let search_ReleaseDate = [];
 let search_display = [];
+
 
 // GENERATE ACCESS-TOKEN USING REFRESH-TOKEN
 

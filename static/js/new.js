@@ -48,9 +48,13 @@ async function enable_newReleases(){
 
             inputTrack.value = items[iter]['name']
             
-            var uuuu = "http://127.0.0.1:5000/audio?name=newReleases" + inputTrack.value + items[iter]['id'];
-            var uu = "http://127.0.0.1:5000/audio?name=newReleases&trk="+`${items[iter]['id']}`;
-            location.href = uu;
+            // var uuuu = "http://127.0.0.1:5000/audio?name=newReleases" + inputTrack.value + items[iter]['id'];
+            // var uu = "http://127.0.0.1:5000/audio?name=newReleases&trk="+`${items[iter]['id']}`;
+            
+            // location.href = uu;
+            
+            location.href = items[iter]['external_urls']['spotify'];
+
 
             enable_searchItem(items[iter]['name'])
             console.log('a')

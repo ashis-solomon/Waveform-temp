@@ -58,7 +58,7 @@ function onPageLoad(){
     refreshAccessToken();
     setTimeout(() => {  
         access_token = window.sessionStorage.getItem('access_token');
-        enable_newReleases(); }, 400);
+        enable_newReleases(); }, 500);
     // enable_newReleases();
 }
 

@@ -20,7 +20,7 @@ async function enable_newReleases(){
     let limit = 12;
     let market = 'US';
     let url = `${RELEASE_URL}?country=${market}&limit=${limit}&offset=${offset}`;
-    let resp = await searchItem(url);
+    let resp = await newReleases(url);
 
     let albums = resp['albums']
     let items = albums['items']

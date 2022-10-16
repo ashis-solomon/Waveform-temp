@@ -10,14 +10,13 @@ def index():
 
 @app.route('/audio',methods=['POST','GET'])
 def audio():
-    pass_str = request.form.get('hoo')
-    print(request.form)
-    name = request.args.get("name")
-    print(name)
-    trk = request.args.get("trk")
-    print(trk)
-    print("ashissss")
-    return render_template('audio.html',pass_str=pass_str,name=name,trk=trk)
+    displayName = request.args.get("displayName")
+    print(displayName)
+    trkID = request.args.get("trkID")
+    print(trkID)
+    trkPop = request.args.get("trkPop")
+    print(trkPop)
+    return render_template('audio.html',displayName=displayName,trkID=trkID,trkPop=trkPop)
 
 if __name__ == "main":
     app.run(debug=True)

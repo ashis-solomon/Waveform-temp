@@ -18,11 +18,9 @@ inputBox.onkeyup = (e)=>{
         let emptyArray = [];
         if(userData){
             icon.onclick = ()=>{
-                // var webLink = `http://go.com/page?KEY=${userData}`;
                 // var webLink = `http://127.0.0.1:5000/audio?name=searchBox`;
                 // location.href = webLink;
-                // location.href = url;
-                // webLink = `https://www.google.com/search?q=`;
+                
                 console.log(localStorage.getItem('tempIndex1'))
                 for(let i=0; i<search_display.length; i++){
                     if(userData == search_display[i]){
@@ -95,5 +93,4 @@ function set_value(resolved_id){
     let route_pass = search_trackIDs[resolved_id] + ',' + search_trackNames[resolved_id] + ',' + search_trackPopularity[resolved_id]
     localStorage.setItem('routePass',route_pass)
         
-    input_hidden.value = route_pass
 }

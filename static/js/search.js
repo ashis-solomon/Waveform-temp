@@ -19,7 +19,11 @@ inputBox.onkeyup = (e)=>{
     if(userData){
         suggestionsAuto = search_display;
         icon.onclick = ()=>{
-            webLink = `https://www.google.com/search?q=${userData}`;
+            // var webLink = `http://go.com/page?KEY=${userData}`;
+            var webLink = `http://127.0.0.1:5000/audio?name=searchBox`;
+            location.href = webLink;
+            // location.href = url;
+            // webLink = `https://www.google.com/search?q=`;
             linkTag.setAttribute("href", webLink);
             linkTag.click();
         }
@@ -48,7 +52,12 @@ function select(element){
     let selectData = element.textContent;
     inputBox.value = selectData;
     icon.onclick = ()=>{
-        webLink = `https://www.google.com/search?q=${selectData}`;
+        // var webLink = `http://google.com/page?KEY=${selectData}`;
+        var webLink = `/audio?name=searchBox`;
+        location.href = webLink;
+
+        // location.href = url;
+        // webLink = `https://www.google.com/search?q=`;
         linkTag.setAttribute("href", webLink);
         linkTag.click();
     }

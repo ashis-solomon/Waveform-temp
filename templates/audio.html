@@ -7,5 +7,23 @@
 {% block body %}
     <h1>Audio</h1>
     <h2>{{pass_str}}</h2>
+    <h2>{{name}}</h2>
+    <h2>{{trk}}</h2>
+    <h2>https://open.spotify.com/embed/track/{{trk}}?utm_source=generator</h2>
 
+    
+    <iframe style="border-radius:12px" 
+    src = "https://open.spotify.com/embed/track/3z06k8YF9CqX0CGFrlekOK?utm_source=generator"
+    
+    width="50%" 
+    height="152" 
+    frameBorder="0" 
+    allowfullscreen="" 
+    allow="autoplay; 
+    clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+    loading="lazy">
+    </iframe>
+
+
+    <script src="../static/js/audio.js"></script>
 {% endblock %}

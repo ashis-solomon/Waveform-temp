@@ -56,8 +56,10 @@ function handleAuthorizationResponse() {
 function onPageLoad(){
     console.log('PageLoad');
     refreshAccessToken();
-    access_token = window.sessionStorage.getItem('access_token');
-    enable_newReleases();
+    setTimeout(() => {  
+        access_token = window.sessionStorage.getItem('access_token');
+        enable_newReleases(); }, 400);
+    // enable_newReleases();
 }
 
 // QuerySelector Variables

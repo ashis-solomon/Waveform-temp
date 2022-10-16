@@ -45,8 +45,13 @@ async function enable_newReleases(){
         x.addEventListener("click",function(e){
             // alert("clicked");
             e.preventDefault();
+
             inputTrack.value = items[iter]['name']
             
+            var uuuu = "http://127.0.0.1:5000/audio?name=newReleases" + inputTrack.value + items[iter]['id'];
+            var uu = "http://127.0.0.1:5000/audio?name=newReleases&trk="+`${items[iter]['id']}`;
+            location.href = uu;
+
             enable_searchItem(items[iter]['name'])
             console.log('a')
             console.log(search_trackNames)

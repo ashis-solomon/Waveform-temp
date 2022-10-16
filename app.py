@@ -8,11 +8,16 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/audio',methods=['POST'])
+@app.route('/audio',methods=['POST','GET'])
 def audio():
     pass_str = request.form.get('hoo')
     print(request.form)
-    return render_template('audio.html',pass_str=pass_str)
+    name = request.args.get("name")
+    print(name)
+    trk = request.args.get("trk")
+    print(trk)
+    print("ashissss")
+    return render_template('audio.html',pass_str=pass_str,name=name,trk=trk)
 
 if __name__ == "main":
     app.run(debug=True)

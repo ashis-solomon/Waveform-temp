@@ -100,15 +100,16 @@ async function enablex_trackids(albumurl,songimgs) {
             // alert("clicked");
             e.preventDefault();
 
-            inputTrack.value = songx_names[iter]
+            // inputTrack.value = songx_names[iter]
+            //check this lineeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
             
             // var uuuu = "http://127.0.0.1:5000/audio?name=newReleases" + inputTrack.value + items[iter]['id'];
             // var uu = "http://127.0.0.1:5000/audio?name=newReleases&trk="+`${items[iter]['id']}`;
             
             // location.href = uu;
             // https://open.spotify.com/track/5QO79kh1waicV47BqGRL3g
-            location.href = `https://open.spotify.com/track/${songx_ids[iter]}`
-
+            let uuu = `https://open.spotify.com/track/${songx_ids[iter]}`;
+            location.href = uuu;
 
             enable_searchItem(items[iter]['name'])
             console.log('a')

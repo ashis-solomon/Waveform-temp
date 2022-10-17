@@ -17,6 +17,18 @@ ARTSTR=ARTSTR.slice(0, -3);
 console.log(ARTSTR)
     
 
+let art_names = {}
+let art_ids = {}
+let art_names_str=''
+let art_ids_str=''
+
+const s_ids=[]
+const s_pop=[]
+const s_name=[]
+const s_explicit=[]
+const s_trkURL=[]
+const imgs=[]
+
 let ARTIST_URL = `https://api.spotify.com/v1/artists?ids=${ARTSTR}`
 
 async function gettrackpop(url,access_token) {
@@ -91,18 +103,16 @@ async function enable_suggestions(suggestionUrl)
 {
     let jsondata = await getSuggestions(suggestionUrl,access_token)
     console.log(jsondata)
-    let art_names = {}
-    let art_ids = {}
-    let art_names_str=''
-    let art_ids_str=''
+    
 
-    const s_ids=[]
-    const s_name=[]
-    const imgs=[]
+    
     let tracks = jsondata["tracks"]
     for(let i=0;i<tracks.length;i++){
         s_name.push(tracks[i]["name"])
+        s_pop.push(tracks[i]["popularity"])
         s_ids.push(tracks[i]["id"])
+        s_trkURL.push(tracks[i]["external_urls"]["spotify"])
+        s_explicit.push(tracks[i]["explicit"])
         imgs.push(tracks[i]["album"]["images"][1]["url"])
     }
     for(let i=0;i<tracks.length;i++){
@@ -140,6 +150,42 @@ async function enable_suggestions(suggestionUrl)
         x.querySelector("p").innerHTML = art_names[iter]
         x.querySelector("img").src = imgs[iter];
         x.querySelector("img").alt = s_name[iter];
+        x.addEventListener("click",function(e){
+            // alert("clicked");
+            e.preventDefault();
+            set_NEWvalue(iter);
+            // inputTrack.value = songx_names[iter]
+            //check this lineeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+            
+            // let uuu = `https://open.spotify.com/track/${songx_ids[iter]}`;
+            // location.href = uuu;
+
+            let webLink = `/audio?displayName=${s_name[iter]}%20-%20${art_names[iter]}&trkID=${s_ids[iter]}&trkPop=${s_pop[iter]}`;
+            location.href = webLink;
+        })
       }
 }
 enable_track_pop();
+
+function set_NEWvalue(resolved_id){
+    // console.log(`${s_name[resolved_id]} - ${art_names[resolved_id]}`)
+    // console.log(s_ids[resolved_id])
+    // console.log(art_ids[resolved_id])
+    // console.log(s_explicit[resolved_id])
+    // console.log(s_trkURL[resolved_id])
+    // console.log('-----------------------------------------------------------')
+    localStorage.setItem('trackDisplayName',`${s_name[resolved_id]} - ${art_names[resolved_id]}`)
+    localStorage.setItem('trackID',s_ids[resolved_id])
+    localStorage.setItem('artistIDs',art_ids[resolved_id])
+    localStorage.setItem('trackExplicit',s_explicit[resolved_id])
+    // localStorage.setItem('trackReleaseDate',search_ReleaseDate[resolved_id])
+
+    // localStorage.setItem('trackPopularity',songx_albPop[resolved_id])
+    //temporarily giving album pop as trk pop
+
+    localStorage.setItem('trackUrl',s_trkURL[resolved_id])    
+
+    // let route_pass = search_trackIDs[resolved_id] + ',' + search_trackNames[resolved_id] + ',' + search_trackPopularity[resolved_id]
+    // localStorage.setItem('routePass',route_pass)
+        
+}

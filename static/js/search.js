@@ -86,11 +86,11 @@ function set_value(resolved_id){
     localStorage.setItem('trackID',search_trackIDs[resolved_id])
     localStorage.setItem('artistIDs',search_artistIDs[resolved_id])
     localStorage.setItem('trackExplicit',search_trackExplicit[resolved_id])
-    localStorage.setItem('trackReleaseDate',search_ReleaseDate[resolved_id])
-    localStorage.setItem('trackPopularity',search_trackPopularity[resolved_id])
+    // localStorage.setItem('trackReleaseDate',search_ReleaseDate[resolved_id])
+    // localStorage.setItem('trackPopularity',search_trackPopularity[resolved_id])
     localStorage.setItem('trackUrl',search_trackUrl[resolved_id])    
 
-    let route_pass = search_trackIDs[resolved_id] + ',' + search_trackNames[resolved_id] + ',' + search_trackPopularity[resolved_id]
-    localStorage.setItem('routePass',route_pass)
+    // let route_pass = search_trackIDs[resolved_id] + ',' + search_trackNames[resolved_id] + ',' + search_trackPopularity[resolved_id]
+    // localStorage.setItem('routePass',route_pass)
         
 }

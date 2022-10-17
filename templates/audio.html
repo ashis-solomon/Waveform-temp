@@ -2,10 +2,13 @@
 
 {% block head %}
     <title>Audio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 {% endblock %}
 
 {% block body %}
     <h1>Audio</h1>
+    <br><br><br>
     <h2>{{displayName}}</h2>
     <h2>{{trkID}}</h2>
     <h2>{{trkPop}}</h2>
@@ -24,5 +27,120 @@
     loading="lazy">
     </iframe>
 
+
+    <br><br><br>
+    <div>
+        <form action="/stat" method="POST">
+        <input type="hidden" name="hoo" value="" id="hoo" />
+        <input class="btn" type="submit" value="PREDICT">
+        </form>
+    </div>
+    <br><br><br>
+<!-- -------------------------------------------------------------------------------------------------------------- -->
+    <section id="new_release">
+        <div class="heading">
+            <h1 >Similar Songs</h1>
+        </div>
+        
+    <div class="card-deck">
+        <div class="row">
+          
+           <!-- card 0 -->
+        <div class="col-12 col-md-6 col-lg-2" id="card0">
+          <div class="card">
+            <a href="">
+            <img class="card-img-top" src="..." alt="Card image cap">
+          </a>
+            <div class="card-body">
+              <h5 class="card-title">TrackName</h5>
+              <p class="card-text">ArtistName</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted"></small>
+            </div>
+            </div>
+          </div>
+            <!-- card 1 -->
+        <div class="col-12 col-md-6 col-lg-2" id="card1">
+        <div class="card">
+          <a href="">
+          <img class="card-img-top" src="..." alt="Card image cap">
+        </a>
+          <div class="card-body">
+            <h5 class="card-title">TrackName</h5>
+            <p class="card-text">ArtistName</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"></small>
+          </div>
+          </div>
+        </div>
+            <!-- card 2 -->
+            <div class="col-12 col-md-6 col-lg-2" id="card2">
+              <div class="card">
+                <a href="">
+                <img class="card-img-top" src="..." alt="Card image cap">
+              </a>
+                <div class="card-body">
+                  <h5 class="card-title">TrackName</h5>
+                  <p class="card-text">ArtistName</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted"></small>
+                </div>
+                </div>
+              </div>
+        <!-- card 3 -->
+        <div class="col-12 col-md-6 col-lg-2" id="card3">
+          <div class="card">
+            <a href="">
+            <img class="card-img-top" src="..." alt="Card image cap">
+          </a>
+            <div class="card-body">
+              <h5 class="card-title">TrackName</h5>
+              <p class="card-text">ArtistName</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted"></small>
+            </div>
+            </div>
+          </div>     
+        <!-- card 4 -->
+        <div class="col-12 col-md-6 col-lg-2" id="card4">
+            <div class="card">
+              <a href="">
+              <img class="card-img-top" src="..." alt="Card image cap">
+            </a>
+              <div class="card-body">
+                <h5 class="card-title">TrackName</h5>
+                <p class="card-text">ArtistName</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted"></small>
+              </div>
+              </div>
+            </div>   
+        <!-- card 5 -->
+        <div class="col-12 col-md-6 col-lg-2" id="card5">
+            <div class="card">
+              <a href="">
+              <img class="card-img-top" src="..." alt="Card image cap">
+            </a>
+              <div class="card-body">
+                <h5 class="card-title">TrackName</h5>
+                <p class="card-text">ArtistName</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted"></small>
+              </div>
+              </div>
+            </div>  
+      
+        </div>
+        </div>
+        </section>
+
+
     <script src="../static/js/audio.js"></script>
+    <script src="../static/js/suggestions.js"></script>
 {% endblock %}

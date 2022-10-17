@@ -1,7 +1,4 @@
-const input_hidden = document.querySelector('#hoo');
-let access_token = window.sessionStorage.getItem('access_token');
 
-// ------------------------------------------------------------------------------------------------------------
 
 'use strict';
 
@@ -16,11 +13,12 @@ for(let i=0; i<artist_ids.length; i++){
     artstr=artstr+artist_ids[i]+'%2C'
 }
 artstr=artstr.slice(0, -3);
-// console.log(artstr)
+console.log(artstr)
     
 
 
-
+let access_token = "BQAF2JZ-Al-YivqlYVAxPymERNj1rsfW8YHYXl17yi7df4vj7PJtMXxv4N15MLShytizKArj-1xqGZHkOul0JGlwbpbzAFNVyGJs6Bsm9ELilngdZJBSJZUCZsyM-D-m3XOYqEpYOPGhGDlVITQpsm9kyRbTo-QKqZ39kQHWP4fBiOFh4jQxvrbtOBFRzoz-JEI";
+ 
 let track_id ="2takcwOaAZWiXQijPHIx7B"
 
 
@@ -52,7 +50,7 @@ async function getAudiofeatures(url,access_token) {
 async function enable_curr_audio() {
     
     let jsondata = await getAudiofeatures(curr_url,access_token)
-    // console.log(jsondata)
+    //console.log(jsondata)
     let avg_value_dict = {}
     //points.push(jsondata["energy"])
     avg_value_dict["danceability"] = jsondata["danceability"] 
@@ -69,10 +67,10 @@ async function enable_curr_audio() {
     avg_value_dict["time_signature"] = jsondata["time_signature"]
     avg_value_dict["tempo"] = jsondata["tempo"]
     avg_value_dict["valence"] = jsondata["valence"]
-    // console.log("hello: "+avg_value_dict["tempo"])
+    console.log("hello: "+avg_value_dict["tempo"])
     //console.log(avg_value_dict)
     for (const [key, value] of Object.entries(avg_value_dict)) {
-        // console.log(key, value);
+        console.log(key, value);
       }
     //return avg_value_dict
 }
@@ -110,7 +108,7 @@ async function enable_track_pop() {
             index_pop=j
         }
     }
-    // console.log("pop: " +  jsondata["artists"][index_pop]["popularity"] + " name: " +  jsondata["artists"][index_pop]["name"] + " id: " + jsondata["artists"][index_pop]["id"])
+    console.log("pop: " +  jsondata["artists"][index_pop]["popularity"] + " name: " +  jsondata["artists"][index_pop]["name"] + " id: " + jsondata["artists"][index_pop]["id"])
     let most_popid=jsondata["artists"][index_pop]["id"]
     enable_albumids(`https://api.spotify.com/v1/artists/${most_popid}/albums?include_groups=album&market=US&limit=3&offset=0`)
     
@@ -146,7 +144,7 @@ async function enable_albumids(arturl) {
        albstr=albstr+items[i]["id"]+'%2C'}
     //console.log(album_ids)
     albstr=albstr.slice(0, -3);
-    // console.log(albstr)
+    console.log(albstr)
     
     let alburl=`https://api.spotify.com/v1/albums?ids=${albstr}&market=US`
 
@@ -174,10 +172,6 @@ async function get_trackids(url,access_token) {
 async function enable_trackids(alburl) {
     
     let jsondata = await get_trackids(alburl,access_token)
-    // console.log(jsondata)
-
-    
-
     //console.log("albumname "+ jsondata["items"][0]["name"])
     //albums=jsondata["album"]
     //console.log(albums)
@@ -193,7 +187,7 @@ async function enable_trackids(alburl) {
     const track_names =[];  
     //console.log(track_enclose_ids) 
    
-    // console.log(track_enclose_ids[2].length) 
+    console.log(track_enclose_ids[2].length) 
     for(let x=0; x<track_enclose_ids.length; x++){
         for(let y=0; y<track_enclose_ids[x].length;y++){
             track_ids.push(track_enclose_ids[x][y]["id"])
@@ -201,8 +195,8 @@ async function enable_trackids(alburl) {
         }
 
      }
-    //  console.log(track_names)
-    //  console.log(track_ids)
+     console.log(track_names)
+     console.log(track_ids)
     //return avg_value_dict
 
     for(let i=0; i<track_ids.length; i++){
@@ -211,7 +205,7 @@ async function enable_trackids(alburl) {
     }
     
         trkstr=trkstr.slice(0, -3);
-        // console.log(trkstr);
+        console.log(trkstr);
      
      let trkurl=`https://api.spotify.com/v1/audio-features?ids=${trkstr}`;
 
@@ -232,24 +226,9 @@ async function get_track_audio(url,access_token) {
 
 async function enable_track_audio(trkurl)
 {
-// ------------------------------------------------------------------------------------------------------------
-
     let jsonData=await get_track_audio(trkurl,access_token);
-
-    const myJSON = JSON.stringify(jsonData);
-    // console.log(myJSON)
-
-    // let str = myJSON.replaceAll(' ','%20');
-    // console.log(str)
-
-    let route_pass = myJSON
-    input_hidden.value = route_pass
-    // console.log(`hiddenvalue  -  ${input_hidden.value}`)
-
-// ------------------------------------------------------------------------------------------------------------
-
     let all=jsonData["audio_features"];
-    // console.log(all);
+    console.log(all);
 
     //Sum Variables
     let sum_acousticness=0;
@@ -344,17 +323,22 @@ async function enable_track_audio(trkurl)
     avg_value_dict["tempo"] = avg_tempo;
 
     avg_value_dict["valence"] = avg_valence;
-    // console.log(avg_value_dict);
+    console.log(avg_value_dict);
     
 }
+
+
+
+
+
+
+
+
+
 
 
 enable_curr_audio();
 enable_track_pop();
 //console.log(avg_value_dict["tempo"])
 //console.log(points)
-
-// ------------------------------------------------------------------------------------------------------------
-// ------------------------------------------------------------------------------------------------------------
-
 

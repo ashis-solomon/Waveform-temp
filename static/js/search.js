@@ -6,6 +6,8 @@ const icon = searchWrapper.querySelector(".icon");
 let linkTag = searchWrapper.querySelector("a");
 let webLink;
 
+let suggestionsAuto = [];
+
 // if user press any key and release
 inputBox.onkeyup = (e)=>{
     console.log(e.target.value)

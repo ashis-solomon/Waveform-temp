@@ -19,6 +19,12 @@ def audio():
     return render_template('audio.html',displayName=displayName,trkID=trkID,trkPop=trkPop)
 
 
+@app.route('/stat',methods=['POST','GET'])
+def stat():
+    pass_str = request.form.get('hoo')
+    # print(request.form)
+    return render_template('stat.html',pass_str=pass_str)
+
 @app.route('/chart')
 def chart():
     return render_template('chart.html')

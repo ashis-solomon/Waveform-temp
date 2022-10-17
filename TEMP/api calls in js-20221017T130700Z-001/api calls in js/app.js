@@ -1,7 +1,4 @@
-const input_hidden = document.querySelector('#hoo');
-let access_token = window.sessionStorage.getItem('access_token');
 
-// ------------------------------------------------------------------------------------------------------------
 
 'use strict';
 
@@ -20,6 +17,7 @@ artstr=artstr.slice(0, -3);
     
 
 
+let access_token = "BQA6FBCqhZwD8Mddm43FO-zC-HsiQrK47H8n0A0BIzMggyfO6rWILyIYd5Ady440wE-NrHRFtOmS5F0jYyaaGSNFbDYpXOXf9I2WrdSFgn8mEQd0kXdY3IvdbzIg2zUBY5U_x44OoeczhlI280Xw2qT2pyp00CGPmdVhKpg41DmkbcGsnaSM1SZ99iWJfdWExb3fG_UdBCM0HWbm3ns02SKj0OAkT3e_cxtVZ0upoKCvPnlOxN9UtFMWNjQvo9u4dMDix3tsNRJWGsJn481jj_P_B8rTjffigUXItEExY5s4s_i0-HVl"
 
 let track_id ="2takcwOaAZWiXQijPHIx7B"
 
@@ -174,10 +172,7 @@ async function get_trackids(url,access_token) {
 async function enable_trackids(alburl) {
     
     let jsondata = await get_trackids(alburl,access_token)
-    // console.log(jsondata)
-
-    
-
+    console.log(jsondata)
     //console.log("albumname "+ jsondata["items"][0]["name"])
     //albums=jsondata["album"]
     //console.log(albums)
@@ -232,22 +227,7 @@ async function get_track_audio(url,access_token) {
 
 async function enable_track_audio(trkurl)
 {
-// ------------------------------------------------------------------------------------------------------------
-
     let jsonData=await get_track_audio(trkurl,access_token);
-
-    const myJSON = JSON.stringify(jsonData);
-    // console.log(myJSON)
-
-    // let str = myJSON.replaceAll(' ','%20');
-    // console.log(str)
-
-    let route_pass = myJSON
-    input_hidden.value = route_pass
-    // console.log(`hiddenvalue  -  ${input_hidden.value}`)
-
-// ------------------------------------------------------------------------------------------------------------
-
     let all=jsonData["audio_features"];
     // console.log(all);
 
@@ -349,12 +329,17 @@ async function enable_track_audio(trkurl)
 }
 
 
+
+
+
+
+
+
+
+
+
 enable_curr_audio();
 enable_track_pop();
 //console.log(avg_value_dict["tempo"])
 //console.log(points)
-
-// ------------------------------------------------------------------------------------------------------------
-// ------------------------------------------------------------------------------------------------------------
-
 

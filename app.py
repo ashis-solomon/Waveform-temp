@@ -18,5 +18,10 @@ def audio():
     print(trkPop)
     return render_template('audio.html',displayName=displayName,trkID=trkID,trkPop=trkPop)
 
+
+@app.route('/chart')
+def chart():
+    return render_template('chart.html')
+
 if __name__ == "main":
     app.run(debug=True)

@@ -76,22 +76,36 @@ async function enablex_trackids(albumurl,songimgs) {
     let jsondata = await getx_trackids(albumurl,access_token)  
     console.log(jsondata)
 
+    
+
     // console.log(jsondata["albums"][0]["tracks"]["items"][12]) 
     for(let i=0;i<jsondata["albums"].length;i++){
-        songx_ids.push(jsondata["albums"][i]["tracks"]["items"][0]["id"])
-        songx_names.push(jsondata["albums"][i]["tracks"]["items"][0]["name"])
+        let tempLEN = jsondata["albums"][i]["tracks"]["items"].length;
+        if(tempLEN==1){
+            tempLEN = 0;
+        }else{
+            tempLEN = tempLEN-1;
+        }
+        songx_ids.push(jsondata["albums"][i]["tracks"]["items"][tempLEN]["id"])
+        songx_names.push(jsondata["albums"][i]["tracks"]["items"][tempLEN]["name"])
         songx_albPop.push(jsondata["albums"][i]["popularity"])
-        songx_explicit.push(jsondata["albums"][i]["tracks"]["items"][0]["explicit"])
-        songx_trkURL.push(jsondata["albums"][i]["tracks"]["items"][0]["external_urls"]["spotify"])
+        songx_explicit.push(jsondata["albums"][i]["tracks"]["items"][tempLEN]["explicit"])
+        songx_trkURL.push(jsondata["albums"][i]["tracks"]["items"][tempLEN]["external_urls"]["spotify"])
     }
     // console.log(songx_ids)
     // console.log(songx_names)
     for(let i=0;i<jsondata["albums"].length;i++){
+        let tempLEN = jsondata["albums"][i]["tracks"]["items"].length;
+        if(tempLEN==1){
+            tempLEN = 0;
+        }else{
+            tempLEN = tempLEN-1;
+        }
         artist_string=''
         artist_name_string=''
-        for(let j=0;j<jsondata["albums"][i]["tracks"]["items"][0]["artists"].length;j++){
-            artist_string=artist_string+jsondata["albums"][i]["tracks"]["items"][0]["artists"][j]["id"]+","
-            artist_name_string=artist_name_string+jsondata["albums"][i]["tracks"]["items"][0]["artists"][j]["name"]+", "
+        for(let j=0;j<jsondata["albums"][i]["tracks"]["items"][tempLEN]["artists"].length;j++){
+            artist_string=artist_string+jsondata["albums"][i]["tracks"]["items"][tempLEN]["artists"][j]["id"]+","
+            artist_name_string=artist_name_string+jsondata["albums"][i]["tracks"]["items"][tempLEN]["artists"][j]["name"]+", "
         }
         artistidsx[i]=artist_string.slice(0,-1)
         artistnamesx[i]=artist_name_string.slice(0,-2)

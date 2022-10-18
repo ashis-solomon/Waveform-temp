@@ -373,13 +373,14 @@ async function enable_track_audio(trkurl,jsonfinaldata)
     for(let i=0;i<all.length;i++){
         if(all[i]["id"]==jsonfinaldata[i]["id"]){
         all[i]["name"]=jsonfinaldata[i]["name"]
+        all[i]["explicit"]=jsonfinaldata[i]["explicit"]
         all[i]["popularity"]=jsonfinaldata[i]["popularity"]}
     }
     console.log(all)
     const myJSON = JSON.stringify(all);
     // console.log('myJSON')
     // console.log(myJSON)
-    let route_pass = myJSON + `@${localStorage.getItem('artistPop')}`
+    let route_pass = myJSON + `@${localStorage.getItem('artistPop')}` 
     // console.log(route_pass)
     input_hidden.value = route_pass
 }

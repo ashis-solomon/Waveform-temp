@@ -80,12 +80,7 @@ async function enablex_trackids(albumurl,songimgs) {
 
     // console.log(jsondata["albums"][0]["tracks"]["items"][12]) 
     for(let i=0;i<jsondata["albums"].length;i++){
-        let tempLEN = jsondata["albums"][i]["tracks"]["items"].length;
-        if(tempLEN==1){
-            tempLEN = 0;
-        }else{
-            tempLEN = tempLEN-1;
-        }
+        let tempLEN = jsondata["albums"][i]["tracks"]["items"].length - 1;
         songx_ids.push(jsondata["albums"][i]["tracks"]["items"][tempLEN]["id"])
         songx_names.push(jsondata["albums"][i]["tracks"]["items"][tempLEN]["name"])
         songx_albPop.push(jsondata["albums"][i]["popularity"])
@@ -95,12 +90,7 @@ async function enablex_trackids(albumurl,songimgs) {
     // console.log(songx_ids)
     // console.log(songx_names)
     for(let i=0;i<jsondata["albums"].length;i++){
-        let tempLEN = jsondata["albums"][i]["tracks"]["items"].length;
-        if(tempLEN==1){
-            tempLEN = 0;
-        }else{
-            tempLEN = tempLEN-1;
-        }
+        let tempLEN = jsondata["albums"][i]["tracks"]["items"].length - 1;
         artist_string=''
         artist_name_string=''
         for(let j=0;j<jsondata["albums"][i]["tracks"]["items"][tempLEN]["artists"].length;j++){

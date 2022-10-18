@@ -144,7 +144,7 @@ async function enable_track_pop() {
     // }
     // console.log("pop: " +  jsondata["artists"][index_pop]["popularity"] + " name: " +  jsondata["artists"][index_pop]["name"] + " id: " + jsondata["artists"][index_pop]["id"])
     let most_popid=jsondata["artists"][index_pop]["id"]
-    enable_albumids(`https://api.spotify.com/v1/artists/${most_popid}/albums?include_groups=album&market=US&limit=50&offset=0`)
+    enable_albumids(`https://api.spotify.com/v1/artists/${most_popid}/albums?&market=US&limit=50&offset=0`)
     
     //return avg_value_dict
 }
@@ -167,6 +167,7 @@ async function get_albumids(url,access_token) {
 async function enable_albumids(arturl) {
     
     let jsondata = await get_albumids(arturl,access_token)
+    // console.log(jsondata)
     //console.log("albumname "+ jsondata["items"][0]["name"])
     let items= jsondata["items"]
     //console.log(items[1]["name"])
@@ -174,7 +175,11 @@ async function enable_albumids(arturl) {
     let albstr='';
     //console.log(items.length-1)
     //console.log("pop: " +  jsondata["artists"][0]["popularity"] + " name: " +  jsondata["artists"][0]["name"])
-    for(let i=0; i<items.length; i++){
+    let albtempindex = 20;
+    if(items.length < 20){
+        albtempindex = items.length;
+    }
+    for(let i=0; i<albtempindex; i++){
        album_ids.push(items[i]['name'])
        albstr=albstr+items[i]["id"]+'%2C'}
     //console.log(album_ids)
@@ -211,6 +216,7 @@ async function enable_trackids(alburl) {
     //albums=jsondata["album"]
     //console.log(albums)
     let alb=jsondata["albums"]
+    console.log(jsondata)
     let trkstr='';
     // console.log("hey")
     // console.log(alb)
@@ -383,3 +389,28 @@ enable_track_pop();
 // console.log(avg_value_dict["tempo"])
 //console.log(points)
 
+
+async function getIMGurl(url,access_token) {
+    let response = await fetch(url, {
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + access_token,
+        }
+    });
+    let data = await response.json();
+    return data;
+}
+
+async function enable_IMGurl(trackID)
+{
+    URL = `https://api.spotify.com/v1/tracks/${trackID}`;
+    let jsondata = await getIMGurl(URL,access_token);
+    console.log(jsondata);
+    console.log(jsondata["album"]["images"]);
+    console.log(jsondata["album"]["images"][2]["url"]);
+    localStorage.setItem('IMGurl',jsondata["album"]["images"][2]["url"]);
+}
+
+enable_IMGurl(localStorage.getItem('trackID'));
+   

@@ -181,7 +181,7 @@ function set_NEWvalue(resolved_id){
     // localStorage.setItem('trackReleaseDate',search_ReleaseDate[resolved_id])
 
     // localStorage.setItem('trackPopularity',songx_albPop[resolved_id])
-    //temporarily giving album pop as trk pop
+    //trk pop over here
 
     localStorage.setItem('trackUrl',s_trkURL[resolved_id])    
 

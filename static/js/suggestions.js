@@ -14,7 +14,7 @@ for(let i=0; i<ARTIST_IDS.length; i++){
     ARTSTR=ARTSTR+ARTIST_IDS[i]+'%2C'
 }
 ARTSTR=ARTSTR.slice(0, -3);
-console.log(ARTSTR)
+// console.log(ARTSTR)
     
 
 let art_names = {}
@@ -63,13 +63,13 @@ async function enable_track_pop() {
             index_pop=j
         }
     }
-    console.log("pop: " +  jsondata["artists"][index_pop]["popularity"] + " name: " +  jsondata["artists"][index_pop]["name"] + " id: " + jsondata["artists"][index_pop]["id"])
+    // console.log("pop: " +  jsondata["artists"][index_pop]["popularity"] + " name: " +  jsondata["artists"][index_pop]["name"] + " id: " + jsondata["artists"][index_pop]["id"])
     let most_popid=jsondata["artists"][index_pop]["id"]
     // enable_albumids(`https://api.spotify.com/v1/artists/${most_popid}/albums?include_groups=album&market=US&limit=3&offset=0`)
-    console.log(most_popid)
+    // console.log(most_popid)
     let genresLength = jsondata["artists"][index_pop]["genres"].length;
 
-    console.log(genresLength);
+    // console.log(genresLength);
     if(genresLength>3){
         genresLength=3;
     }
@@ -81,9 +81,9 @@ async function enable_track_pop() {
     genresStr=genresStr.slice(0, -3);
     
     genresStr= genresStr.replaceAll(' ','%20');
-    console.log(genresStr);
+    // console.log(genresStr);
     let suggestionUrl=`https://api.spotify.com/v1/recommendations?limit=6&market=US&seed_artists=${most_popid}&seed_genres=${genresStr}&seed_tracks=${TRACK_ID}`
-    console.log(suggestionUrl)
+    // console.log(suggestionUrl)
     enable_suggestions(suggestionUrl);
 }
 
@@ -102,7 +102,7 @@ async function getSuggestions(url,access_token) {
 async function enable_suggestions(suggestionUrl)
 {
     let jsondata = await getSuggestions(suggestionUrl,access_token)
-    console.log(jsondata)
+    // console.log(jsondata)
     
 
     
@@ -125,11 +125,11 @@ async function enable_suggestions(suggestionUrl)
         art_names[i]= art_names_str.slice(0,-1)
         art_ids[i]= art_ids_str.slice(0,-1)
     }
-    console.log(s_ids)
-    console.log(s_name)
-    console.log(imgs)
-    console.log(art_names)
-    console.log(art_ids)
+    // console.log(s_ids)
+    // console.log(s_name)
+    // console.log(imgs)
+    // console.log(art_names)
+    // console.log(art_ids)
    
     for( let i=0;i<6;i++)
     {

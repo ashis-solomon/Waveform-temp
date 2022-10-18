@@ -29,7 +29,7 @@ async function enable_newReleases(){
     const songimgs=[]
     let offset = 0;
     let limit = 12;
-    let market = 'IN';
+    let market = 'US';
     let url = `https://api.spotify.com/v1/browse/new-releases?country=${market}&limit=${limit}&offset=${offset}`;
     let resp = await newReleases(url);
 

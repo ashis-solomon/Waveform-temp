@@ -1,7 +1,13 @@
 const input_hidden = document.querySelector('#hoo');
 let access_token = window.sessionStorage.getItem('access_token');
 
-// ------------------------------------------------------------------------------------------------------------
+let TRACK_ID_1 = localStorage.getItem('trackID')
+let ARTIST_IDS_t_1 = localStorage.getItem('artistIDs')
+
+const ARTIST_IDS_1 = ARTIST_IDS_t_1.split(",");
+
+console.log(TRACK_ID_1)
+console.log(ARTIST_IDS_1)
 
 'use strict';
 
@@ -10,7 +16,7 @@ let access_token = window.sessionStorage.getItem('access_token');
 
 
 //let avg_value_dict = {}
-const artist_ids = ["1mYsTxnqsietFxj1OgoGbG"];
+const artist_ids = ARTIST_IDS_1;
 let artstr='';
 for(let i=0; i<artist_ids.length; i++){
     artstr=artstr+artist_ids[i]+'%2C'
@@ -19,9 +25,7 @@ artstr=artstr.slice(0, -3);
 // console.log(artstr)
     
 
-
-
-let track_id ="2takcwOaAZWiXQijPHIx7B"
+let track_id = TRACK_ID_1;
 
 
 //let artist2 ="3MZsBdqDrRTJihTHQrO6Dq"
@@ -52,25 +56,53 @@ async function getAudiofeatures(url,access_token) {
 async function enable_curr_audio() {
     
     let jsondata = await getAudiofeatures(curr_url,access_token)
-    // console.log(jsondata)
+    //console.log(jsondata)
     let avg_value_dict = {}
     //points.push(jsondata["energy"])
     avg_value_dict["danceability"] = jsondata["danceability"] 
+    localStorage.setItem('danceability',avg_value_dict['danceability'])
+
     avg_value_dict["acousticness"] = jsondata["acousticness"]
+    localStorage.setItem('acousticness',avg_value_dict['acousticness'])
+
     avg_value_dict["duration"] = jsondata["duration_ms"]
+    localStorage.setItem('duration',avg_value_dict['duration'])
+
     avg_value_dict["energy"] = jsondata["energy"]
+    localStorage.setItem('energy',avg_value_dict['energy'])
+
     avg_value_dict["s_id"] = jsondata["id"]
+    localStorage.setItem('s_id',avg_value_dict['s_id'])
+
     avg_value_dict["instrumentalness"] = jsondata["instrumentalness"]
+    localStorage.setItem('instrumentalness',avg_value_dict['instrumentalness'])
+
     avg_value_dict["key"] = jsondata["key"]
+    localStorage.setItem('key',avg_value_dict['key'])
+
     avg_value_dict["liveness"] = jsondata["liveness"]
+    localStorage.setItem('liveness',avg_value_dict['liveness'])
+
     avg_value_dict["loudness"] = jsondata["loudness"]
+    localStorage.setItem('loudness',avg_value_dict['loudness'])
+
     avg_value_dict["mode"] = jsondata["mode"]
+    localStorage.setItem('mode',avg_value_dict['mode'])
+
     avg_value_dict["speechiness"] = jsondata["speechiness"]
+    localStorage.setItem('speechiness',avg_value_dict['speechiness'])
+
     avg_value_dict["time_signature"] = jsondata["time_signature"]
+    localStorage.setItem('time_signature',avg_value_dict['time_signature'])
+
     avg_value_dict["tempo"] = jsondata["tempo"]
+    localStorage.setItem('tempo',avg_value_dict['tempo'])
+
     avg_value_dict["valence"] = jsondata["valence"]
+    localStorage.setItem('valence',avg_value_dict['valence'])
+
     // console.log("hello: "+avg_value_dict["tempo"])
-    //console.log(avg_value_dict)
+    console.log(avg_value_dict)
     for (const [key, value] of Object.entries(avg_value_dict)) {
         // console.log(key, value);
       }
@@ -109,12 +141,13 @@ async function enable_track_pop() {
             grtpop=pop_art[j]
             index_pop=j
         }
-    }
+    // }
     // console.log("pop: " +  jsondata["artists"][index_pop]["popularity"] + " name: " +  jsondata["artists"][index_pop]["name"] + " id: " + jsondata["artists"][index_pop]["id"])
     let most_popid=jsondata["artists"][index_pop]["id"]
-    enable_albumids(`https://api.spotify.com/v1/artists/${most_popid}/albums?include_groups=album&market=US&limit=3&offset=0`)
+    enable_albumids(`https://api.spotify.com/v1/artists/${most_popid}/albums?include_groups=album&market=US&limit=50&offset=0`)
     
     //return avg_value_dict
+}
 }
 
 
@@ -151,7 +184,7 @@ async function enable_albumids(arturl) {
     let alburl=`https://api.spotify.com/v1/albums?ids=${albstr}&market=US`
 
 
-    //https://api.spotify.com/v1/albums?ids=382ObEPsp2rxGrnsizN5TX%2C1A2GTWGtFfWp7KSQTwWOyo%2C2noRn2Aes5aoNVsU6iWThc&market=US
+    //https://api.spotify.com/v1/artists/6M2wZ9GZgrQXHCFfjv46we/albums?include_groups=single%2Calbum&market=US&limit=50&offset=0
 
 
     enable_trackids(alburl)
@@ -174,16 +207,14 @@ async function get_trackids(url,access_token) {
 async function enable_trackids(alburl) {
     
     let jsondata = await get_trackids(alburl,access_token)
-    // console.log(jsondata)
-
-    
-
     //console.log("albumname "+ jsondata["items"][0]["name"])
     //albums=jsondata["album"]
     //console.log(albums)
     let alb=jsondata["albums"]
     let trkstr='';
-    //console.log(alb)
+    // console.log("hey")
+    // console.log(alb)
+    // console.log("ehy")
     const track_enclose_ids = [];
     for(let i=0; i<alb.length; i++){
          track_enclose_ids.push(alb[i]["tracks"]["items"])
@@ -204,8 +235,15 @@ async function enable_trackids(alburl) {
     //  console.log(track_names)
     //  console.log(track_ids)
     //return avg_value_dict
+    let n=0;
+    if(track_ids.length>100){
+        n=100
+    }
+    else{
+        n=track_ids.length
+    }
 
-    for(let i=0; i<track_ids.length; i++){
+    for(let i=0; i<n; i++){
         
         trkstr=trkstr+track_ids[i]+'%2C'
     }
@@ -214,9 +252,90 @@ async function enable_trackids(alburl) {
         // console.log(trkstr);
      
      let trkurl=`https://api.spotify.com/v1/audio-features?ids=${trkstr}`;
+     let trkgetstr1=''
+     let trkgetstr2=''
+     let trkgeturl1=''
+     let trkgeturl2=''
+     if(n>50){
+        for(let i=0; i<50; i++){
+            trkgetstr1=trkgetstr1+track_ids[i]+'%2C'
+        }
+        trkgetstr1=trkgetstr1.slice(0, -3);
+        //"https://api.spotify.com/v1/tracks?market=US&ids=7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B"
+        trkgeturl1=`https://api.spotify.com/v1/tracks?market=US&ids=${trkgetstr1}`;
+        //enable_get_sev_track(trkgeturl1)
+        // console.log(trkgeturl1)
+        for(let i=50;i<n;i++){
+            trkgetstr2=trkgetstr2+track_ids[i]+'%2C'
+        }
+        trkgetstr2=trkgetstr2.slice(0, -3);
+        //"https://api.spotify.com/v1/tracks?market=US&ids=7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B"
+        trkgeturl2=`https://api.spotify.com/v1/tracks?market=US&ids=${trkgetstr2}`;
+        //enable_get_sev_track(trkgeturl2)
+        enable_get_sev_track(trkgeturl1,trkgeturl2,n,trkurl)
+        // console.log(trkgeturl2)
+     }
+     else{
+        for(let i=0; i<n; i++){
+            trkgetstr1=trkgetstr1+track_ids[i]+'%2C'
+        }
+        trkgetstr1=trkgetstr1.slice(0, -3);
+        //"https://api.spotify.com/v1/tracks?market=US&ids=7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B"
+        trkgeturl1=`https://api.spotify.com/v1/tracks?market=US&ids=${trkgetstr1}`;
+        //console.log("dgfdy")
+        // console.log(trkurl)
+        enable_get_sev_track(trkgeturl1,trkgeturl2,n,trkurl)
+     }
 
-     enable_track_audio(trkurl);
+     //enable_track_audio(trkurl);
 }
+
+async function get_sev_track(url,access_token) {
+    let response = await fetch(url, {
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + access_token,
+        }
+    });
+    let data = await response.json()
+    return data;
+}
+
+async function enable_get_sev_track(trkurl1,trkurl2,n,trkurl)
+{
+    let jsonData1;
+    let jsonData2;
+    let jsonfinaldata={}
+    if(n>50){
+    jsonData1=await get_sev_track(trkurl1,access_token);
+    // console.log(jsonData1["tracks"])
+    jsonData2=await get_sev_track(trkurl2,access_token);
+    // console.log(jsonData2["tracks"])
+    for(let i=0;i<50;i++){
+        jsonfinaldata[i]=jsonData1["tracks"][i]
+    }
+    for(let i=0;i<n-50;i++){
+        jsonfinaldata[i+50]=jsonData2["tracks"][i]
+    }
+    //console.log(jsonfinaldata)
+    }
+    else{
+        jsonData1=await get_sev_track(trkurl1,access_token);
+        for(let i=0;i<n;i++){
+            jsonfinaldata[i]=jsonData1["tracks"][i]
+        }
+        //console.log(jsonfinaldata)  
+    }
+    // console.log("jjjj")
+    // console.log(jsonfinaldata)
+    //console.log(n)
+    //console.log(track_names)
+    //let all=jsonData["audio_features"];
+    // console.log(trkurl)
+    enable_track_audio(trkurl,jsonfinaldata);
+}
+
 
 async function get_track_audio(url,access_token) {
     let response = await fetch(url, {
@@ -230,131 +349,37 @@ async function get_track_audio(url,access_token) {
     return data;
 }
 
-async function enable_track_audio(trkurl)
+async function enable_track_audio(trkurl,jsonfinaldata)
 {
-// ------------------------------------------------------------------------------------------------------------
-
     let jsonData=await get_track_audio(trkurl,access_token);
-
-    const myJSON = JSON.stringify(jsonData);
+    //console.log(n)
+    //console.log(track_names)
+    let all=jsonData["audio_features"];
+    //console.log(all);
+    /*for(let i=0;i<n;i++){
+        all[i]["name"]=track_names[i]
+    }*/
+    // console.log("belh")
+    // console.log(all)
+    // console.log("blehhhhh")
+    // console.log(jsonfinaldata)
+    for(let i=0;i<all.length;i++){
+        if(all[i]["id"]==jsonfinaldata[i]["id"]){
+        all[i]["name"]=jsonfinaldata[i]["name"]
+        all[i]["popularity"]=jsonfinaldata[i]["popularity"]}
+    }
+    console.log(all)
+    const myJSON = JSON.stringify(all);
+    // console.log('myJSON')
     // console.log(myJSON)
-
-    // let str = myJSON.replaceAll(' ','%20');
-    // console.log(str)
-
     let route_pass = myJSON
     input_hidden.value = route_pass
-    // console.log(`hiddenvalue  -  ${input_hidden.value}`)
-
-// ------------------------------------------------------------------------------------------------------------
-
-    let all=jsonData["audio_features"];
-    // console.log(all);
-
-    //Sum Variables
-    let sum_acousticness=0;
-    let sum_danceability=0;
-    let sum_duration_ms=0;
-    let sum_energy=0;
-    let sum_instrumentalness=0;
-    let sum_liveness=0;
-    let sum_loudness=0;
-    let sum_speechiness=0;
-    let sum_tempo=0;
-    let sum_valence=0;
-
-    //Avg Variables
-
-    let avg_acousticness=0;
-    let avg_danceability=0;
-    let avg_duration_ms=0;
-    let avg_energy=0;
-    let avg_instrumentalness=0;
-    let avg_liveness=0;
-    let avg_loudness=0;
-    let avg_speechiness=0;
-    let avg_tempo=0;
-    let avg_valence=0;
-    let i;
-    
-    for(i=0;i<all.length;i++)
-    {
-        sum_acousticness=sum_acousticness+all[i]["acousticness"];
-
-        sum_danceability=sum_danceability+all[i]["danceability"];
-
-        sum_duration_ms=sum_duration_ms+all[i]["duration_ms"];
-
-        sum_energy=sum_energy+all[i]["energy"];
-
-        sum_instrumentalness=sum_instrumentalness+all[i]["instrumentalness"];
-
-        sum_liveness=sum_liveness+all[i]["liveness"];
-
-        sum_loudness=sum_loudness+all[i]["loudness"];
-
-        sum_speechiness=sum_speechiness+all[i]["speechiness"];
-
-        sum_tempo=sum_tempo+all[i]["tempo"];
-
-        sum_valence=sum_valence+all[i]["valence"];
-        
-    }
-
-    avg_acousticness=sum_acousticness/all.length;
-
-    avg_danceability=sum_danceability/all.length;
-
-    avg_duration_ms=sum_duration_ms/all.length;
-
-    avg_energy=sum_energy/all.length;
-
-    avg_instrumentalness=sum_instrumentalness/all.length;
-
-    avg_liveness=sum_liveness/all.length;
-
-    avg_loudness=sum_loudness/all.length;
-
-    avg_speechiness=sum_speechiness/all.length;
-
-    avg_tempo=sum_tempo/all.length;
-
-    avg_valence=sum_valence/all.length;
-
-    //Dictionary Creation    
-     let avg_value_dict = {}
-   
-    avg_value_dict["danceability"] = avg_danceability;
-
-    avg_value_dict["acousticness"] = avg_acousticness;
-
-    avg_value_dict["duration"] = avg_duration_ms;
-
-    avg_value_dict["energy"] = avg_energy;
-    
-    avg_value_dict["instrumentalness"] =avg_instrumentalness;
-   
-    avg_value_dict["liveness"] = avg_liveness;
-
-    avg_value_dict["loudness"] = avg_loudness;
-
-    
-    avg_value_dict["speechiness"] = avg_speechiness;
-
-    avg_value_dict["tempo"] = avg_tempo;
-
-    avg_value_dict["valence"] = avg_valence;
-    // console.log(avg_value_dict);
-    
 }
 
 
 enable_curr_audio();
 enable_track_pop();
-//console.log(avg_value_dict["tempo"])
+
+// console.log(avg_value_dict["tempo"])
 //console.log(points)
-
-// ------------------------------------------------------------------------------------------------------------
-// ------------------------------------------------------------------------------------------------------------
-
 

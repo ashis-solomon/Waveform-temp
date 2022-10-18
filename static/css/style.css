@@ -31,7 +31,7 @@ section {
   font-family: 'Poppins', sans-serif;
 }
 
-body{
+/* body{
   background: #644bff;
   padding: 0 20px;
 }
@@ -39,7 +39,7 @@ body{
 ::selection{
   color: #fff;
   background: #664AFF;
-}
+} */
 
 .wrapper{
   max-width: 450px;

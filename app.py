@@ -29,6 +29,14 @@ def stat():
 def chart():
     return render_template('chart.html')
 
+@app.route('/tryout')
+def tryout():
+    return render_template('tryout.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
 @app.route('/contact')
 def contact():
     return render_template('contact.html')

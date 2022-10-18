@@ -104,8 +104,10 @@ async function enable_curr_audio() {
     // console.log("hello: "+avg_value_dict["tempo"])
     console.log(avg_value_dict)
     for (const [key, value] of Object.entries(avg_value_dict)) {
-        // console.log(key, value);
+        console.log(key, value);
       }
+    
+    console.log(avg_value_dict)
     //return avg_value_dict
 }
 
@@ -145,7 +147,7 @@ async function enable_track_pop() {
     console.log("pop: " +  jsondata["artists"][index_pop]["popularity"] + " name: " +  jsondata["artists"][index_pop]["name"] + " id: " + jsondata["artists"][index_pop]["id"])
     localStorage.setItem('artistPop',jsondata["artists"][index_pop]["popularity"]);
     let most_popid=jsondata["artists"][index_pop]["id"]
-    enable_albumids(`https://api.spotify.com/v1/artists/${most_popid}/albums?&market=US&limit=50&offset=0`)
+    enable_albumids(`https://api.spotify.com/v1/artists/${most_popid}/albums?include_groups=single%2Calbum&market=US&limit=50&offset=0`)
     
     //return avg_value_dict
 }
@@ -359,6 +361,7 @@ async function get_track_audio(url,access_token) {
 async function enable_track_audio(trkurl,jsonfinaldata)
 {
     let jsonData=await get_track_audio(trkurl,access_token);
+    console.log(jsonData)
     //console.log(n)
     //console.log(track_names)
     let all=jsonData["audio_features"];
@@ -371,10 +374,15 @@ async function enable_track_audio(trkurl,jsonfinaldata)
     // console.log("blehhhhh")
     // console.log(jsonfinaldata)
     for(let i=0;i<all.length;i++){
-        if(all[i]["id"]==jsonfinaldata[i]["id"]){
-        all[i]["name"]=jsonfinaldata[i]["name"]
-        all[i]["explicit"]=jsonfinaldata[i]["explicit"]
-        all[i]["popularity"]=jsonfinaldata[i]["popularity"]}
+        try {
+            if(all[i]["id"]==jsonfinaldata[i]["id"]){
+                all[i]["name"]=jsonfinaldata[i]["name"]
+                all[i]["explicit"]=jsonfinaldata[i]["explicit"]
+                all[i]["popularity"]=jsonfinaldata[i]["popularity"]}
+          }
+          catch(err) {
+            console.log('error')
+          }
     }
     console.log(all)
     const myJSON = JSON.stringify(all);

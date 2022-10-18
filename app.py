@@ -29,5 +29,9 @@ def stat():
 def chart():
     return render_template('chart.html')
 
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
 if __name__ == "main":
     app.run(debug=True)

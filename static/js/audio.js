@@ -14,6 +14,7 @@ console.log(ARTIST_IDS_1)
 //"https://api.spotify.com/v1/artists?ids=2CIMQHirSU0MQqyYHq0eOx%2C57dN52uHvrHOxijzpIgu3E%2C1vCWHaC5f2uS3yhpwWbIA6"
 
 
+let avgg = [];
 
 //let avg_value_dict = {}
 const artist_ids = ARTIST_IDS_1;
@@ -108,6 +109,7 @@ async function enable_curr_audio() {
       }
     
     console.log(avg_value_dict)
+    avgg[0] = avg_value_dict;
     //return avg_value_dict
 }
 
@@ -388,7 +390,13 @@ async function enable_track_audio(trkurl,jsonfinaldata)
     const myJSON = JSON.stringify(all);
     // console.log('myJSON')
     // console.log(myJSON)
-    let route_pass = myJSON + `@${localStorage.getItem('artistPop')}` 
+    console.log(avgg[0])
+
+    const myJSON1 = JSON.stringify(avgg[0]);
+    console.log(myJSON1)
+    
+    let route_pass = myJSON + `@${localStorage.getItem('artistPop')}` + `@${myJSON1}`;
+
     // console.log(route_pass)
     input_hidden.value = route_pass
 }

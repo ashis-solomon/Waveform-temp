@@ -141,14 +141,15 @@ async function enable_track_pop() {
             grtpop=pop_art[j]
             index_pop=j
         }
-    // }
-    // console.log("pop: " +  jsondata["artists"][index_pop]["popularity"] + " name: " +  jsondata["artists"][index_pop]["name"] + " id: " + jsondata["artists"][index_pop]["id"])
+    }
+    console.log("pop: " +  jsondata["artists"][index_pop]["popularity"] + " name: " +  jsondata["artists"][index_pop]["name"] + " id: " + jsondata["artists"][index_pop]["id"])
+    localStorage.setItem('artistPop',jsondata["artists"][index_pop]["popularity"]);
     let most_popid=jsondata["artists"][index_pop]["id"]
     enable_albumids(`https://api.spotify.com/v1/artists/${most_popid}/albums?&market=US&limit=50&offset=0`)
     
     //return avg_value_dict
 }
-}
+
 
 
 
@@ -378,7 +379,8 @@ async function enable_track_audio(trkurl,jsonfinaldata)
     const myJSON = JSON.stringify(all);
     // console.log('myJSON')
     // console.log(myJSON)
-    let route_pass = myJSON
+    let route_pass = myJSON + `@${localStorage.getItem('artistPop')}`
+    // console.log(route_pass)
     input_hidden.value = route_pass
 }
 

@@ -29,16 +29,37 @@ artstr=artstr.slice(0, -3);
 let track_id = TRACK_ID_1;
 
 
-//let artist2 ="3MZsBdqDrRTJihTHQrO6Dq"
-//let artist1 ="6KImCVD70vtIoJWnq6nGn3"
-//let artist3 = "4yvcSjfu4PC0CYQyLy4wSq"
-//let url = "https://api.spotify.com/v1/audio-features/11dFghVXANMlKmJXsNCbNl"
-let curr_url = `https://api.spotify.com/v1/audio-features/${track_id}`
-
+let track_url_for_year = `https://api.spotify.com/v1/tracks/${track_id}?market=US`
+//https://api.spotify.com/v1/tracks/11dFghVXANMlKmJXsNCbNl?market=ES"
 
 let artist_url = `https://api.spotify.com/v1/artists?ids=${artstr}`
 
 
+
+async function track_year(url,access_token) {
+    let response = await fetch(url, {
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + access_token,
+        }
+    });
+    let data = await response.json()
+    return data;
+}
+
+async function enable_track_year() {
+    
+    let jsondata = await track_year(track_url_for_year,access_token)
+    console.log("hey")
+    console.log(jsondata)
+    let track_release_date=jsondata["album"]["release_date"]
+    let tracktempid = jsondata["id"]
+    let curr_url = `https://api.spotify.com/v1/audio-features/${tracktempid}`
+    console.log("hey")
+    enable_curr_audio(curr_url,track_release_date)
+
+}
 
 
 
@@ -54,7 +75,7 @@ async function getAudiofeatures(url,access_token) {
     return data;
 }
 
-async function enable_curr_audio() {
+async function enable_curr_audio(curr_url,track_release_date) {
     
     let jsondata = await getAudiofeatures(curr_url,access_token)
     //console.log(jsondata)
@@ -101,6 +122,9 @@ async function enable_curr_audio() {
 
     avg_value_dict["valence"] = jsondata["valence"]
     localStorage.setItem('valence',avg_value_dict['valence'])
+
+    avg_value_dict["release_date"] = track_release_date
+    localStorage.setItem('release_date_',avg_value_dict['release_date'])
 
     // console.log("hello: "+avg_value_dict["tempo"])
     console.log(avg_value_dict)
@@ -395,14 +419,14 @@ async function enable_track_audio(trkurl,jsonfinaldata)
     const myJSON1 = JSON.stringify(avgg[0]);
     console.log(myJSON1)
     
-    let route_pass = myJSON + `@${localStorage.getItem('artistPop')}` + `@${myJSON1}`;
+    let route_pass = myJSON + `!@#$%${localStorage.getItem('artistPop')}` + `!@#$%${myJSON1}`;
 
     // console.log(route_pass)
     input_hidden.value = route_pass
 }
 
 
-enable_curr_audio();
+enable_track_year();
 enable_track_pop();
 
 // console.log(avg_value_dict["tempo"])

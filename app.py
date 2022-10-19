@@ -22,6 +22,14 @@ def audio():
 @app.route('/stat',methods=['POST','GET'])
 def stat():
     pass_str = request.form.get('hoo')
+    items=pass_str.split('!@#$%')
+    print(items)
+    print("hey")
+    print(items[1])
+    print("hey")
+    print(items[0])
+    print("hey")
+    print(items[2])
     # print(request.form)
     return render_template('stat.html',pass_str=pass_str)
 

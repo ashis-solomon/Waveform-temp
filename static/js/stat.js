@@ -9,6 +9,24 @@ IMG.querySelector("img").height = 256;
 console.log(IMG)
 
 
+const fac = new FastAverageColor();
+var container = document.getElementById('image-container');
+// container.querySelector("img").src = 'https://i.scdn.co/image/ab67616d0000b27304bfd5a5fd5aa6ca648f66aa';
+let color;
+fac.getColorAsync(localStorage.getItem('IMGurl'))
+        .then(color => {
+            container.style.backgroundColor = color.rgba;
+            container.style.color = color.isDark ? '#fff' : '#000';
+            localStorage.setItem('IMGcolor',color['rgba'])
+            console.log('Average color', color);
+        })
+        .catch(e => {
+            console.log(e);
+        });
+
+console.log(localStorage.getItem('IMGcolor'));
+
+
 
 var TRK = document.getElementById('trk');
 TRK.innerHTML = `${localStorage.getItem('trackDisplayName')}`

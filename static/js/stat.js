@@ -43,4 +43,8 @@ D3.innerHTML = `Explicit : ${localStorage.getItem('trackExplicit')}`
 D4.innerHTML = `Loudness : ${localStorage.getItem('loudness')}`
 D5.innerHTML = `Key : ${localStorage.getItem('key')}`
 
+setTimeout(()=>{
+    localStorage.clear();
+},5000);
+
 

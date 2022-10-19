@@ -96,6 +96,3 @@ if(localStorage.getItem('mode')==0){
 }
 D5.innerHTML = `Key : ${dict[localStorage.getItem('key')]+minmajor}`
 
-
-
-

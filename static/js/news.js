@@ -3,7 +3,7 @@
 function setINITIALnews(){    
     let api_key = "5ded574a864b45148274ffb0adc49f2c";
     console.log('APII')
-    let curr_url = `https://newsapi.org/v2/everything?q=songs&domains=billboard.com&language=en&apiKey=${api_key}`
+    let curr_url = `https://newsapi.org/v2/everything?q=music&domains=billboard.com&language=en&apiKey=${api_key}`
 
     let stringfornews_0 = `storage_0_`;
     let stringfornews_1 = `storage_1_`;

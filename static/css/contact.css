@@ -1,0 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body > div.flex {
+    background-color: #faeee7;
+}
+body > div.flex > div > div {
+    background-color: #fffffe;
+}
+body > div.flex > div > div h1 {
+    color: #33272a;
+}
+body > div.flex > div > div p, body > div.flex > div > div label {
+    color: #594a4e;
+}
+body > div.flex > div > div form p:last-of-type {
+    font-size: 18px;
+    color: #33272a;
+    font-weight: 500;
+}
+body > div.flex > div > div form button {
+    background: #ffc6c7;
+    color: #33272a;
+    font-weight: 500;
+}
+body > div.flex > div > div form button:hover {
+    background: #faeee7;
+}
+
+@media screen and (max-width: 400px) {
+    body > div.flex > div > div {
+        width: 320px;
+        padding: 1rem 0.25rem;
+    }
+}

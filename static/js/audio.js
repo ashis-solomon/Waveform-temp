@@ -54,10 +54,11 @@ async function enable_track_year() {
     console.log("hey")
     console.log(jsondata)
     let track_release_date=jsondata["album"]["release_date"]
+    let track_explicit = jsondata["explicit"]
     let tracktempid = jsondata["id"]
     let curr_url = `https://api.spotify.com/v1/audio-features/${tracktempid}`
     console.log("hey")
-    enable_curr_audio(curr_url,track_release_date)
+    enable_curr_audio(curr_url,track_release_date,track_explicit)
 
 }
 
@@ -75,7 +76,7 @@ async function getAudiofeatures(url,access_token) {
     return data;
 }
 
-async function enable_curr_audio(curr_url,track_release_date) {
+async function enable_curr_audio(curr_url,track_release_date,track_explicit) {
     
     let jsondata = await getAudiofeatures(curr_url,access_token)
     //console.log(jsondata)
@@ -126,6 +127,8 @@ async function enable_curr_audio(curr_url,track_release_date) {
     avg_value_dict["release_date"] = track_release_date
     localStorage.setItem('release_date_',avg_value_dict['release_date'])
 
+    avg_value_dict["explicit"] = track_explicit
+    localStorage.setItem('explicit_',avg_value_dict['explicit'])
     // console.log("hello: "+avg_value_dict["tempo"])
     console.log(avg_value_dict)
     for (const [key, value] of Object.entries(avg_value_dict)) {

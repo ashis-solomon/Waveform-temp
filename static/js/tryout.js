@@ -1,6 +1,28 @@
+const dict_key = [
+    "acousticness",
+    "danceability",
+    "energy",
+    "instrumentalness",
+    "liveness",
+    "speechiness",
+    "valence",
+    "key",
+    "mode",
+    "explicit",
+    "duration",
+    "loudness",
+    "tempo"
+]
+
+const dict = {}
+
 var el1 = [];
 var el2 = [];
+var text_label = [];
 for(let i=1; i<8; i++){
+    text_label[i] = document.getElementById(`${i}`);
+    text_label[i].innerHTML = dict_key[i-1];
+    text_label[i].innerHTML = text_label[i].innerHTML.charAt(0).toUpperCase() + text_label[i].innerHTML.slice(1,);
     el1[i] = document.getElementById(`textTRY${i}`);
     el2[i] = document.getElementById(`rangeTRY${i}`);
 }
@@ -35,3 +57,14 @@ b3_RANDOM.addEventListener('click', function (){
         el2[i].value = el1[i].value;
     }
 });
+
+b1_SUBMIT.addEventListener('click', function(){
+    console.log(dict_key.length)
+    for(let i=0; i<7; i++){
+        dict[`${dict_key[i]}`] = el1[i+1].value;
+    }
+
+    console.log(dict);
+});
+
+

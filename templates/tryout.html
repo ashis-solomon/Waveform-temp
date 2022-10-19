@@ -94,6 +94,8 @@
     </div>
 
     <div class="form-check form-check-inline">
+      <label id="6"><h4>Key</h4></label>
+      <br>
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="checkbox" id="inlineCheckbox0" value="option0">
             <label class="form-check-label" for="inlineCheckbox1">0</label>
@@ -145,18 +147,39 @@
           
     </div>
 
-    <div class="form-check form-check-inline">
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="form-check-label" for="inlineRadio1">Minor</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-            <label class="form-check-label" for="inlineRadio2">Major</label>
-        </div>
-    </div>
-            
     <br><br>
+    <div id="modes">
+      <label id="label_mode"><h4>Mode</h4></label>
+      <br>
+      <input type="radio" id="m1" name="mode" value="0">Minor</input>
+      <input type="radio" id="m2" name="mode" value="1">Major</input>
+    </div>
+    <br><br>
+
+    <div id="explicitt">
+      <label id="label_exp"><h4>Explicit</h4></label>
+      <br>
+      <input type="radio" id="m1" name="exp" value="0">False</input>
+      <input type="radio" id="m2" name="exp" value="1">True</input>
+    </div>
+    <br><br>
+
+    <div id="last3">
+      <label id="last1"><h4>Duration</h4></label>
+      <br>
+      <input type="text" id="l1" value=""></input>
+      <br>
+
+      <label id="last2"><h4>Loudness</h4></label>
+      <br>
+      <input type="text" id="l2" value=""></input>
+      <br>
+
+      <label id="last3"><h4>Tempo</h4></label>
+      <br>
+      <input type="text" id="l3" value=""></input>
+      <br>
+    </div>
 
     <div class="form-group mt-4 text-center">
         <button type="button" class="btn btn-primary btn-lg center" id="b1_SUBMIT">SUBMIT</button>

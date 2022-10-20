@@ -41,6 +41,10 @@ def chart():
 def tryout():
     return render_template('tryout.html')
 
+@app.route('/statTRY')
+def statTRY():
+    return render_template('statTRY.html')
+
 @app.route('/about')
 def about():
     return render_template('about.html')

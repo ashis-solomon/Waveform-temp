@@ -93,93 +93,60 @@
         <input type="range" min="0" max="100" step="0.2" value="50" style="width: 50%" id="rangeTRY7">
     </div>
 
-    <div class="form-check form-check-inline">
-      <label id="6"><h4>Key</h4></label>
+      <div>
+        <label id="6"><h4>Key</h4></label>
       <br>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox0" value="option0">
-            <label class="form-check-label" for="inlineCheckbox1">0</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-            <label class="form-check-label" for="inlineCheckbox1">1</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-            <label class="form-check-label" for="inlineCheckbox1">2</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-            <label class="form-check-label" for="inlineCheckbox1">3</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
-            <label class="form-check-label" for="inlineCheckbox1">4</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
-            <label class="form-check-label" for="inlineCheckbox1">5</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6">
-            <label class="form-check-label" for="inlineCheckbox1">6</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7">
-            <label class="form-check-label" for="inlineCheckbox1">7</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox8" value="option8">
-            <label class="form-check-label" for="inlineCheckbox1">8</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox9" value="option9">
-            <label class="form-check-label" for="inlineCheckbox1">9</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox10" value="option10">
-            <label class="form-check-label" for="inlineCheckbox1">10</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox11" value="option11">
-            <label class="form-check-label" for="inlineCheckbox1">11</label>
-          </div>
-          
-    </div>
+      <form id="mainForm" name="mainForm">
+        <input type="radio" name="rads" value="0"> 0 </input>
+        <input type="radio" name="rads" value="1"> 1 </input>
+        <input type="radio" name="rads" value="2"> 2 </input>
+        <input type="radio" name="rads" value="3"> 3 </input>
+        <input type="radio" name="rads" value="4"> 4 </input>
+        <input type="radio" name="rads" value="5"> 5 </input>
+        <input type="radio" name="rads" value="6"> 6 </input>
+        <input type="radio" name="rads" value="7"> 7 </input>
+        <input type="radio" name="rads" value="8"> 8 </input>
+        <input type="radio" name="rads" value="9"> 9 </input>
+        <input type="radio" name="rads" value="10"> 10 </input>
+        <input type="radio" name="rads" value="11"> 11 </input>
+    </form>
+      </div>
+
 
     <br><br>
-    <div id="modes">
       <label id="label_mode"><h4>Mode</h4></label>
       <br>
-      <input type="radio" id="m1" name="mode" value="0">Minor</input>
-      <input type="radio" id="m2" name="mode" value="1">Major</input>
-    </div>
+      <form id="mainForm1" name="mainForm1">
+        <input type="radio" name="mod" value="0" >Minor</input>
+        <input type="radio" name="mod" value="1" >Major</input>
+      </form>
     <br><br>
 
-    <div id="explicitt">
       <label id="label_exp"><h4>Explicit</h4></label>
       <br>
-      <input type="radio" id="m1" name="exp" value="0">False</input>
-      <input type="radio" id="m2" name="exp" value="1">True</input>
-    </div>
-    <br><br>
+    <form id="mainForm2" name="mainForm2">
+      <input type="radio" name="exp" value="0" >False</input>
+      <input type="radio" name="exp" value="1" >True</input>
+      <br><br>
+  </form>
 
     <div id="last3">
       <label id="last1"><h4>Duration</h4></label>
       <br>
-      <input type="text" id="l1" value=""></input>
+      <input placeholder="time in milliseconds" required="" type="text" id="l1" value=""></input>
       <br>
 
       <label id="last2"><h4>Loudness</h4></label>
       <br>
-      <input type="text" id="l2" value=""></input>
+      <input placeholder="loudness" type="text" id="l2" value=""></input>
       <br>
 
       <label id="last3"><h4>Tempo</h4></label>
       <br>
-      <input type="text" id="l3" value=""></input>
+      <input placeholder="tempo" type="text" id="l3" value=""></input>
       <br>
     </div>
+
 
     <div class="form-group mt-4 text-center">
         <button type="button" class="btn btn-primary btn-lg center" id="b1_SUBMIT">SUBMIT</button>

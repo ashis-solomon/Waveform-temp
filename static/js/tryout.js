@@ -1,3 +1,11 @@
+const b1_SUBMIT = document.getElementById('b1_SUBMIT');
+const b2_RESET = document.getElementById('b2_RESET');
+const b3_RANDOM = document.getElementById('b3_RANDOM');
+
+function onPageLoadReset(){
+    b2_RESET.click();
+}
+
 const dict_key = [
     "acousticness",
     "danceability",
@@ -40,9 +48,6 @@ for(let i=1; i<8; i++){
     });
 }
 
-const b1_SUBMIT = document.getElementById('b1_SUBMIT');
-const b2_RESET = document.getElementById('b2_RESET');
-const b3_RANDOM = document.getElementById('b3_RANDOM');
 
 var dur = document.getElementById('l1');
 dur.addEventListener('input', function (){

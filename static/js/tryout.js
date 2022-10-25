@@ -151,10 +151,14 @@ b1_SUBMIT.addEventListener('click', function(){
         localStorage.setItem(`explicit_`,dict[`explicit`]);
         localStorage.setItem(`trackExplicit`,dict[`explicit`]);
 
-        const myJSON = JSON.stringify(dict);
-        console.log(myJSON)
-        let webLink = `/statTRY`;
+        const my_JSON = JSON.stringify(dict);
+        console.log(my_JSON)
+
+        let webLink = `/statTRY?details=${my_JSON}`;
         location.href = webLink;
+
+        //let webLink = `/statTRY`;
+        //location.href = webLink;
     }
 
 });

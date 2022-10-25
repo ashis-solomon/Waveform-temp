@@ -2,78 +2,94 @@
 
 {% block head %}
     <title>Contact</title>
-
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="../static/css/contact.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-{% endblock %}
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link rel="stylesheet" href="../static/css/style.css">
+        <link rel="stylesheet" href="../static/css/contact.css">
+        <link rel="stylesheet" href="../static/css/navbar.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    {% endblock %}
 
 {% block body %}
     <!-- <h1>Contact</h1> -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="/">
-      <img src="../static/img/Daco_1145248.png" width="100" height="42" class="d-inline-block align-top" alt="">
-      WVFRM
-      </a>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                  <a class="nav-link" href="http://127.0.0.1:5000/">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="http://127.0.0.1:5000/tryout">TryOut</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="http://127.0.0.1:5000/about">About</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="http://127.0.0.1:5000/contact">Contact</a>
-              </li>
-          </ul>
-          <!-- <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-              </form> -->
-      </div>
-  </nav>
+    <nav class="navbar">
+		<div class="container">
+	  
+		  <div class="navbar-header">
+			<button class="navbar-toggler" data-toggle="open-navbar1">
+			  <span></span>
+			  <span></span>
+			  <span></span>
+			</button>
+            <a class="image"  href="#">
+                <img src="../static/img/Daco_1145248.png" width="100" height="42" class="d-inline-block align-top" alt="">
+                </a>
+			<a href="http://127.0.0.1:5000/">
+			  <h4>WV<span>FRM</span></h4>
+			</a>
+		  </div>
+	  
+		  <div class="navbar-menu" id="open-navbar1">
+			<ul class="navbar-nav">
+                <li><a href="http://127.0.0.1:5000/">Home</a></li>
+                <li><a href="http://127.0.0.1:5000/about">About</a></li>
+                <li><a href="http://127.0.0.1:5000/tryout">TryOut</a></li>
+                <li class="active"><a href="http://127.0.0.1:5000/contact">Contact</a></li>
+			</ul>
+		  </div>
+		</div>
+	  </nav>
+    
 
-    <br><br><br>
+    
 
-  <div class="flex items-center min-h-screen bg-gray-50 dark:bg-gray-900">
-    <div class="container mx-auto">
-        <div class="max-w-md mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
-            <div class="text-center">
-                <h1 class="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200">Contact Us</h1>
-                <p class="text-gray-400 dark:text-gray-400">Fill up the form below to send us a message.</p>
-            </div>
-            <div class="m-7">
-                <form action="https://api.web3forms.com/submit" method="POST" id="form">
+    <main>
+		<section class="section-contact">
+			<div class="container">
+				<h1>Contact the team!</h1>
+				<p>Fill out the form below to get in touch with one of our team members. We will try to get back to you within 48 hours. If we do not reply within that time please feel free to use the form again.</p>
+
+				<form action="https://api.web3forms.com/submit" method="POST" id="form">
                     <input type="hidden" name="access_key" value="a2303a56-c75e-4f0c-8454-d0724ebdb330" />
                     <input type="checkbox" name="botcheck" id="" style="display: none;" />
-        
-                    <div class="mb-6">
-                        <label for="name" class="block mb-1 text-sm text-gray-600 dark:text-gray-400">Full Name</label>
-                        <input type="text" name="name" id="name" placeholder="John Doe" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"/>
-                    </div>
-                    <div class="mb-6">
-                        <label for="email" class="block mb-1 text-sm text-gray-600 dark:text-gray-400">Email Address</label>
-                        <input type="email" name="email" id="email" placeholder="you@company.com" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"/>
-                    </div>
-                    <div class="mb-6">
-                        <label for="subject" class="block mb-1 text-sm text-gray-600 dark:text-gray-400">Subject</label>
-                        <input type="text" name="subject" id="subject" placeholder="Your Subject" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"/>
-                    </div>
-                    <div class="mb-6">
-                        <label for="message" class="block mb-1 text-sm text-gray-600 dark:text-gray-400">Your Message</label>
-                        <textarea rows="5" name="message" id="message" placeholder="Your Message" class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" required></textarea>
-                    </div>
-                    <div class="mb-6">
-                        <button type="submit" class="w-full px-3 py-4 text-white rounded-md focus:outline-none">Send Message</button>
-                    </div>
-                    <p class="text-base text-center text-gray-400" id="result"></p>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
+					<div class="form-group">
+						<label for="firstname">First name*</label>
+						<input 
+                        autocomplete="off"
+							type="text" 
+							name="firstname" 
+							id="firstname" 
+							required 
+							class="form-element"
+							placeholder="John" />
+					</div>
+					<div class="form-group">
+						<label for="lastname">Last name*</label>
+						<input autocomplete="off" type="text" name="lastname" id="lastname" required class="form-element" placeholder="Doe" />
+					</div>
+					<div class="form-group">
+						<label for="email">Email address*</label>
+						<input autocomplete="off" type="email" name="email" id="email" required class="form-element" placeholder="john.doe@example.com" />
+					</div>
+					<div class="form-group">
+						<label for="company">Company</label>
+						<input autocomplete="off" type="text" name="company" id="company" class="form-element" placeholder="john.doe@example.com" />
+					</div>
+					<div class="form-group full">
+						<label for="message">What are you looking for?</label>
+						<textarea name="message" id="message" class="form-element" placeholder="I want a website please..."></textarea>
+					</div>
+					<div class="submit-group">
+						<input type="submit" value="SEND MESSAGE" />
+					</div>
+				</form>
+			</div>
+		</section>
+	</main>
+    <script src="../static/js/navbar.js"></script>
 
 {% endblock %}

@@ -27,6 +27,16 @@ let search_trackUrl = [];
 let search_ReleaseDate = [];
 let search_display = [];
 
+// Splash Screen
+
+const splash = document.querySelector('.splash');
+
+document.addEventListener('DOMContentLoaded',(e)=>{
+    setTimeout(()=>{
+        splash.classList.add('display-none');
+    },2000);
+})
+
 
 // GENERATE ACCESS-TOKEN USING REFRESH-TOKEN
 
